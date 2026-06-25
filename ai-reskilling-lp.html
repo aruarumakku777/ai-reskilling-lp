@@ -49,6 +49,7 @@ nav a:hover{color:var(--blue);background:var(--blue-pale)}
 nav a.nav-vws{color:var(--text);border:1px solid var(--border);border-radius:4px}
 nav a.nav-vws:hover{background:var(--alt)}
 .h-cta{background:var(--orange);color:var(--white);padding:9px 20px;border-radius:6px;font-size:.83rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:opacity .2s,box-shadow .2s;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.h-cta-s{display:none}
 .h-cta:hover{opacity:.88;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 
 /* HERO */
@@ -266,7 +267,9 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
   .rm-steps{flex-wrap:wrap;overflow-x:hidden;gap:8px}
   .rm-step{min-width:0;flex:0 0 calc(50% - 4px);padding:0 4px}
   .logo-badge{display:none}
-  .h-cta{padding:8px 14px;font-size:.78rem}
+  .h-cta-f{display:none}
+  .h-cta-s{display:inline}
+  .h-cta{padding:9px 18px;font-size:.83rem}
   .hero-sub{max-width:100%}
   .hero-actions{flex-direction:column;gap:10px}
   .hero-actions .btn{text-align:center}
@@ -309,7 +312,7 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       <a href="https://vws-biz.com/" target="_blank" rel="noopener" class="nav-vws">VWSシリーズ ↗</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
-    <a href="#contact" class="h-cta">資料請求・お問い合わせ</a>
+    <a href="#contact" class="h-cta"><span class="h-cta-f">資料請求・お問い合わせ</span><span class="h-cta-s">お問い合わせ</span></a>
   </div>
 </header>
 
