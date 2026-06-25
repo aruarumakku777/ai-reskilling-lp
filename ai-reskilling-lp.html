@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -240,7 +240,7 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
 
 /* ILLUSTRATIONS */
 .svc-illus{width:100%;height:130px;display:block;margin-bottom:22px;overflow:visible;border-radius:10px}
-.str-illus{width:100%;height:96px;display:block;margin-bottom:16px;overflow:visible;border-radius:8px}
+.str-illus{width:80px;height:80px;display:block;margin:0 auto 18px;overflow:visible}
 .prob-illus{width:100%;max-width:280px;margin:18px auto 0;display:block}
 .sup-illus{max-width:260px;margin:32px auto 0;display:block}
 
@@ -297,7 +297,7 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       <!-- TEXT -->
       <div class="hero-text">
         <div class="eyebrow"><span class="eyebrow-dot"></span>株式会社ビジョン × 株式会社KANNON</div>
-        <h1>AIが教養の時代に、<br>AI活用を社内の<em>"当たり前"</em>へ</h1>
+        <h1>AIが教養の時代に、AI活用を社内の<em>"当たり前"</em>へ</h1>
         <p class="hero-sub">
           <strong>『AIまるごと伴走プログラム』</strong><br>
           株式会社ビジョン×株式会社KANNONが提供するAIリスキリング研修。<br>
@@ -311,144 +311,82 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       <!-- VISUAL -->
       <div class="hero-visual">
         <svg viewBox="0 0 480 390" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Background circles -->
-          <circle cx="420" cy="60" r="90" fill="rgba(255,255,255,0.05)"/>
-          <circle cx="80" cy="330" r="70" fill="rgba(255,165,50,0.07)"/>
+          <!-- bg accent circles -->
+          <circle cx="420" cy="50" r="110" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="50" cy="360" r="80" fill="rgba(255,165,50,0.06)"/>
 
-          <!-- === MONITOR / SCREEN === -->
-          <rect x="28" y="36" width="192" height="148" rx="12" fill="rgba(255,255,255,0.13)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
-          <!-- Menu bar -->
-          <rect x="28" y="36" width="192" height="26" rx="12" fill="rgba(255,255,255,0.2)"/>
-          <rect x="28" y="50" width="192" height="12" fill="rgba(255,255,255,0.2)"/>
-          <circle cx="46" cy="49" r="4" fill="rgba(255,100,90,0.75)"/>
-          <circle cx="60" cy="49" r="4" fill="rgba(255,200,50,0.75)"/>
-          <circle cx="74" cy="49" r="4" fill="rgba(80,200,80,0.75)"/>
-          <!-- Chart title bar -->
-          <rect x="46" y="72" width="72" height="9" rx="4" fill="rgba(255,213,128,0.6)"/>
-          <rect x="126" y="72" width="40" height="9" rx="4" fill="rgba(255,255,255,0.2)"/>
-          <!-- Bar chart -->
-          <rect x="46" y="132" width="17" height="48" rx="3" fill="rgba(255,213,128,0.6)"/>
-          <rect x="70" y="112" width="17" height="68" rx="3" fill="rgba(255,213,128,0.75)"/>
-          <rect x="94" y="96" width="17" height="84" rx="3" fill="rgba(240,92,26,0.92)"/>
-          <rect x="118" y="108" width="17" height="72" rx="3" fill="rgba(255,213,128,0.75)"/>
-          <rect x="142" y="118" width="17" height="62" rx="3" fill="rgba(255,213,128,0.6)"/>
-          <rect x="166" y="124" width="17" height="56" rx="3" fill="rgba(255,213,128,0.5)"/>
-          <!-- Baseline -->
-          <line x1="40" y1="182" x2="200" y2="182" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
-          <!-- Monitor stand -->
-          <rect x="117" y="186" width="10" height="22" rx="3" fill="rgba(255,255,255,0.18)"/>
-          <rect x="100" y="207" width="44" height="7" rx="3.5" fill="rgba(255,255,255,0.18)"/>
+          <!-- ── DASHBOARD CARD ── -->
+          <rect x="14" y="24" width="226" height="180" rx="16" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.26)" stroke-width="1.5"/>
+          <rect x="14" y="24" width="226" height="40" rx="16" fill="rgba(255,255,255,0.2)"/>
+          <rect x="14" y="50" width="226" height="14" fill="rgba(255,255,255,0.2)"/>
+          <circle cx="34" cy="44" r="5" fill="rgba(255,90,80,0.8)"/>
+          <circle cx="50" cy="44" r="5" fill="rgba(255,200,50,0.8)"/>
+          <circle cx="66" cy="44" r="5" fill="rgba(80,200,80,0.8)"/>
+          <!-- chart label -->
+          <rect x="32" y="80" width="68" height="10" rx="5" fill="rgba(255,213,128,0.55)"/>
+          <text x="220" y="82" text-anchor="end" font-size="20" fill="#ffd580" font-family="sans-serif" font-weight="900">+68%</text>
+          <!-- bars -->
+          <rect x="32" y="152" width="18" height="46" rx="4" fill="rgba(255,213,128,0.5)"/>
+          <rect x="56" y="135" width="18" height="63" rx="4" fill="rgba(255,213,128,0.65)"/>
+          <rect x="80" y="116" width="18" height="82" rx="4" fill="rgba(240,92,26,0.9)"/>
+          <rect x="104" y="127" width="18" height="71" rx="4" fill="rgba(255,213,128,0.65)"/>
+          <rect x="128" y="136" width="18" height="62" rx="4" fill="rgba(255,213,128,0.5)"/>
+          <rect x="152" y="142" width="18" height="56" rx="4" fill="rgba(255,213,128,0.4)"/>
+          <rect x="176" y="138" width="18" height="60" rx="4" fill="rgba(255,213,128,0.45)"/>
+          <line x1="26" y1="200" x2="228" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <!-- trend line -->
+          <path d="M41 162 Q88 138 98 116 Q140 88 185 104" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" fill="none" stroke-dasharray="5,4"/>
 
-          <!-- Floating stat card top-right -->
-          <rect x="344" y="28" width="118" height="60" rx="10" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
-          <text x="358" y="50" font-size="11" fill="rgba(255,255,255,0.8)" font-family="sans-serif" font-weight="600">AI活用率</text>
-          <text x="358" y="73" font-size="22" fill="#ffd580" font-family="sans-serif" font-weight="900">+68%</text>
+          <!-- ── STAT CARDS ── -->
+          <rect x="256" y="20" width="136" height="68" rx="12" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.24)" stroke-width="1"/>
+          <text x="272" y="46" font-size="11" fill="rgba(255,255,255,0.72)" font-family="sans-serif">AI活用率</text>
+          <text x="272" y="74" font-size="26" fill="#ffd580" font-family="sans-serif" font-weight="900">+68%</text>
 
-          <!-- Floating mini card -->
-          <rect x="350" y="106" width="100" height="44" rx="8" fill="rgba(255,255,255,0.11)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-          <text x="365" y="124" font-size="10" fill="rgba(255,255,255,0.7)" font-family="sans-serif">業務削減</text>
-          <text x="365" y="141" font-size="16" fill="#ff9a5c" font-family="sans-serif" font-weight="900">49h/月</text>
+          <rect x="256" y="102" width="136" height="64" rx="12" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.24)" stroke-width="1"/>
+          <text x="272" y="126" font-size="11" fill="rgba(255,255,255,0.72)" font-family="sans-serif">月間業務削減</text>
+          <text x="272" y="154" font-size="26" fill="#ff9a5c" font-family="sans-serif" font-weight="900">49h</text>
 
-          <!-- === PERSON A: Male presenter (center) === -->
-          <!-- Shadow -->
-          <ellipse cx="278" cy="376" rx="44" ry="9" fill="rgba(0,0,0,0.18)"/>
-          <!-- Legs -->
-          <rect x="254" y="276" width="22" height="88" rx="10" fill="#0c3d8a"/>
-          <rect x="280" y="276" width="22" height="88" rx="10" fill="#0c3d8a"/>
-          <!-- Shoes -->
-          <ellipse cx="265" cy="361" rx="17" ry="8" fill="#141424"/>
-          <ellipse cx="291" cy="361" rx="17" ry="8" fill="#141424"/>
-          <!-- Body/jacket -->
-          <path d="M240 168 Q248 158 278 155 Q308 158 316 168 L322 278 H234 Z" fill="#0d4a9c"/>
-          <!-- Shirt/collar -->
-          <path d="M268 158 L278 172 L288 158" fill="white"/>
-          <!-- Tie -->
-          <path d="M274 170 L282 170 L286 254 L278 264 L270 254 Z" fill="#f05c1a"/>
-          <!-- Suit lapels -->
-          <path d="M240 168 L268 158 L256 200 Z" fill="#0b3d88"/>
-          <path d="M316 168 L288 158 L300 200 Z" fill="#0b3d88"/>
-          <!-- Left arm – pointing at screen -->
-          <path d="M242 188 Q220 210 195 228" stroke="#0d4a9c" stroke-width="26" stroke-linecap="round" fill="none"/>
-          <!-- Right arm – relaxed -->
-          <path d="M314 188 Q334 215 348 238" stroke="#0d4a9c" stroke-width="24" stroke-linecap="round" fill="none"/>
-          <!-- Pointing hand -->
-          <ellipse cx="192" cy="230" rx="11" ry="9" fill="#f0ccb4"/>
-          <!-- Neck -->
-          <rect x="264" y="138" width="28" height="22" rx="6" fill="#f0ccb4"/>
-          <!-- Head -->
-          <circle cx="278" cy="114" r="34" fill="#f0ccb4"/>
-          <!-- Hair -->
-          <path d="M248 106 C250 84 262 76 278 74 C294 76 306 84 308 106 C302 92 290 87 278 87 C266 87 254 92 248 106Z" fill="#1a0f08"/>
-          <!-- Eyebrows -->
-          <path d="M264 104 Q270 100 276 103" stroke="#1a0f08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <path d="M280 103 Q286 100 292 104" stroke="#1a0f08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Eyes -->
-          <ellipse cx="268" cy="112" rx="5" ry="5.5" fill="#1a0f08"/>
-          <ellipse cx="288" cy="112" rx="5" ry="5.5" fill="#1a0f08"/>
-          <circle cx="270" cy="110" r="1.5" fill="rgba(255,255,255,0.8)"/>
-          <circle cx="290" cy="110" r="1.5" fill="rgba(255,255,255,0.8)"/>
-          <!-- Smile -->
-          <path d="M266 128 Q278 138 290 128" stroke="#c07050" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Ears -->
-          <ellipse cx="244" cy="116" rx="6.5" ry="8" fill="#e8bca4"/>
-          <ellipse cx="312" cy="116" rx="6.5" ry="8" fill="#e8bca4"/>
+          <!-- ── FLAT CHARACTER ── -->
+          <!-- shadow -->
+          <ellipse cx="370" cy="382" rx="52" ry="9" fill="rgba(0,0,0,0.14)"/>
+          <!-- legs -->
+          <rect x="348" y="290" width="20" height="88" rx="10" fill="#0a3580"/>
+          <rect x="374" y="290" width="20" height="88" rx="10" fill="#0a3580"/>
+          <!-- shoes -->
+          <ellipse cx="358" cy="376" rx="20" ry="8" fill="#061e4a"/>
+          <ellipse cx="384" cy="376" rx="20" ry="8" fill="#061e4a"/>
+          <!-- body (suit, simple) -->
+          <rect x="334" y="178" width="76" height="120" rx="18" fill="#1762c4"/>
+          <!-- collar + tie -->
+          <path d="M358 182 L371 200 L384 182" fill="white"/>
+          <path d="M366 200 L376 200 L380 268 L371 278 L362 268 Z" fill="#f05c1a"/>
+          <!-- left arm → pointing at screen -->
+          <path d="M334 204 Q290 228 244 248" stroke="#1762c4" stroke-width="28" stroke-linecap="round" fill="none"/>
+          <!-- right arm relaxed -->
+          <path d="M410 204 Q438 224 454 242" stroke="#1762c4" stroke-width="26" stroke-linecap="round" fill="none"/>
+          <!-- pointing hand -->
+          <circle cx="242" cy="250" r="14" fill="#f0c8a0"/>
+          <!-- neck -->
+          <rect x="357" y="156" width="28" height="24" rx="8" fill="#f0c8a0"/>
+          <!-- head -->
+          <circle cx="371" cy="126" r="40" fill="#f0c8a0"/>
+          <!-- hair (simple cap shape) -->
+          <path d="M333 118 C336 90 352 78 371 78 C390 78 406 90 409 118 C400 100 386 94 371 94 C356 94 342 100 333 118Z" fill="#2a1608"/>
+          <!-- eyes (two simple ellipses) -->
+          <ellipse cx="360" cy="124" rx="6" ry="7" fill="#1a0a04"/>
+          <ellipse cx="382" cy="124" rx="6" ry="7" fill="#1a0a04"/>
+          <circle cx="362" cy="121" r="2.5" fill="rgba(255,255,255,0.85)"/>
+          <circle cx="384" cy="121" r="2.5" fill="rgba(255,255,255,0.85)"/>
+          <!-- smile -->
+          <path d="M358 142 Q371 154 384 142" stroke="#c07050" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <!-- ears -->
+          <ellipse cx="331" cy="128" rx="9" ry="12" fill="#e8bca4"/>
+          <ellipse cx="411" cy="128" rx="9" ry="12" fill="#e8bca4"/>
 
-          <!-- === PERSON B: Female colleague (right) === -->
-          <!-- Shadow -->
-          <ellipse cx="410" cy="376" rx="38" ry="8" fill="rgba(0,0,0,0.15)"/>
-          <!-- Legs -->
-          <rect x="390" y="284" width="19" height="80" rx="9" fill="#1452a0"/>
-          <rect x="413" y="284" width="19" height="80" rx="9" fill="#1452a0"/>
-          <!-- Shoes -->
-          <ellipse cx="399" cy="361" rx="15" ry="7" fill="#141424"/>
-          <ellipse cx="422" cy="361" rx="15" ry="7" fill="#141424"/>
-          <!-- Body/jacket -->
-          <path d="M374 178 Q382 168 410 165 Q438 168 446 178 L450 286 H370 Z" fill="#1762c4"/>
-          <!-- Collar/blouse -->
-          <path d="M400 168 L410 180 L420 168" fill="white"/>
-          <!-- Scarf accent -->
-          <path d="M406 178 L414 178 L417 250 L410 258 L403 250 Z" fill="#ffd580" opacity="0.85"/>
-          <!-- Lapels -->
-          <path d="M374 178 L400 168 L390 208 Z" fill="#1355a8"/>
-          <path d="M446 178 L420 168 L430 208 Z" fill="#1355a8"/>
-          <!-- Left arm – holding tablet -->
-          <path d="M376 200 Q360 228 345 255" stroke="#1762c4" stroke-width="24" stroke-linecap="round" fill="none"/>
-          <!-- Right arm – gesture -->
-          <path d="M444 200 Q462 226 472 248" stroke="#1762c4" stroke-width="22" stroke-linecap="round" fill="none"/>
-          <!-- Tablet in hand -->
-          <rect x="322" y="258" width="54" height="38" rx="6" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <rect x="328" y="264" width="42" height="26" rx="4" fill="rgba(255,255,255,0.12)"/>
-          <rect x="333" y="278" width="6" height="8" rx="2" fill="rgba(255,213,128,0.8)"/>
-          <rect x="342" y="273" width="6" height="13" rx="2" fill="rgba(240,92,26,0.9)"/>
-          <rect x="351" y="276" width="6" height="10" rx="2" fill="rgba(255,213,128,0.8)"/>
-          <rect x="360" y="271" width="6" height="15" rx="2" fill="rgba(240,92,26,0.85)"/>
-          <!-- Neck -->
-          <rect x="397" y="148" width="26" height="20" rx="6" fill="#f5d5c0"/>
-          <!-- Head -->
-          <circle cx="410" cy="126" r="30" fill="#f5d5c0"/>
-          <!-- Hair (long) -->
-          <path d="M382 118 C384 98 394 90 410 88 C426 90 436 98 438 118 C432 105 422 100 410 100 C398 100 388 105 382 118Z" fill="#7a3510"/>
-          <path d="M382 118 C378 148 380 190 386 215" stroke="#7a3510" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <path d="M438 118 C442 148 440 190 434 215" stroke="#7a3510" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <!-- Eyebrows -->
-          <path d="M398 114 Q403 110 409 113" stroke="#5a2808" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M411 113 Q417 110 422 114" stroke="#5a2808" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <!-- Eyes -->
-          <ellipse cx="403" cy="122" rx="4.5" ry="5" fill="#1a0f08"/>
-          <ellipse cx="417" cy="122" rx="4.5" ry="5" fill="#1a0f08"/>
-          <circle cx="404.5" cy="120" r="1.5" fill="rgba(255,255,255,0.8)"/>
-          <circle cx="418.5" cy="120" r="1.5" fill="rgba(255,255,255,0.8)"/>
-          <!-- Smile -->
-          <path d="M401 136 Q410 145 419 136" stroke="#c07050" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <!-- Ears -->
-          <ellipse cx="380" cy="128" rx="6" ry="7.5" fill="#e8b89a"/>
-          <ellipse cx="440" cy="128" rx="6" ry="7.5" fill="#e8b89a"/>
-
-          <!-- Connecting dots (collaboration) -->
-          <circle cx="238" cy="200" r="5" fill="rgba(255,213,128,0.65)"/>
-          <circle cx="260" cy="184" r="3.5" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="218" cy="175" r="4" fill="rgba(240,92,26,0.55)"/>
-          <circle cx="370" cy="190" r="3" fill="rgba(255,255,255,0.4)"/>
+          <!-- decorative dots -->
+          <circle cx="228" cy="210" r="7" fill="rgba(255,213,128,0.55)"/>
+          <circle cx="210" cy="238" r="5" fill="rgba(255,255,255,0.35)"/>
+          <circle cx="232" cy="264" r="6" fill="rgba(240,92,26,0.45)"/>
         </svg>
       </div>
     </div>
@@ -512,67 +450,36 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
     </div>
     <div class="svc-grid">
       <div class="svc-card">
-        <!-- illustration: person at laptop learning AI -->
+        <!-- flat training illustration -->
         <svg class="svc-illus" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="400" height="130" rx="10" fill="var(--blue-pale)"/>
-          <!-- decorative circle bg -->
-          <circle cx="340" cy="20" r="60" fill="rgba(23,98,196,0.07)"/>
-          <circle cx="60" cy="110" r="40" fill="rgba(240,92,26,0.06)"/>
-          <!-- monitor -->
-          <rect x="148" y="22" width="136" height="90" rx="8" fill="#1762c4"/>
-          <rect x="156" y="30" width="120" height="72" rx="5" fill="#dce9fb"/>
-          <!-- stand -->
-          <rect x="209" y="112" width="14" height="12" rx="3" fill="#1762c4" opacity="0.5"/>
-          <rect x="198" y="122" width="36" height="6" rx="3" fill="#1762c4" opacity="0.4"/>
-          <!-- chart on screen -->
-          <rect x="168" y="88" width="12" height="11" rx="2" fill="#f05c1a" opacity="0.8"/>
-          <rect x="183" y="80" width="12" height="19" rx="2" fill="#1762c4" opacity="0.9"/>
-          <rect x="198" y="74" width="12" height="25" rx="2" fill="#f05c1a" opacity="0.85"/>
-          <rect x="213" y="78" width="12" height="21" rx="2" fill="#1762c4" opacity="0.8"/>
-          <rect x="228" y="71" width="12" height="28" rx="2" fill="#f05c1a" opacity="0.9"/>
-          <rect x="243" y="81" width="12" height="18" rx="2" fill="#1762c4" opacity="0.7"/>
-          <line x1="162" y1="99" x2="263" y2="99" stroke="rgba(23,98,196,0.25)" stroke-width="1.5"/>
-          <!-- screen heading -->
-          <rect x="168" y="38" width="48" height="8" rx="4" fill="#1762c4" opacity="0.3"/>
-          <rect x="220" y="38" width="30" height="8" rx="4" fill="rgba(240,92,26,0.3)"/>
-          <!-- AI badge on screen -->
-          <rect x="210" y="50" width="32" height="16" rx="8" fill="#f05c1a"/>
-          <text x="226" y="62" text-anchor="middle" font-size="10" font-weight="900" fill="white" font-family="sans-serif">AI</text>
-          <!-- person (left, sitting) -->
-          <ellipse cx="112" cy="127" rx="26" ry="6" fill="rgba(0,0,0,0.08)"/>
-          <!-- legs -->
-          <rect x="97" y="88" width="14" height="38" rx="6" fill="#0d4a9c"/>
-          <rect x="115" y="88" width="14" height="38" rx="6" fill="#0d4a9c"/>
-          <ellipse cx="104" cy="124" rx="13" ry="6" fill="#0a2a6a"/>
-          <ellipse cx="122" cy="124" rx="13" ry="6" fill="#0a2a6a"/>
-          <!-- body -->
-          <rect x="88" y="46" width="48" height="48" rx="12" fill="#f05c1a"/>
-          <!-- arm extended to keyboard -->
-          <path d="M136 66 Q152 72 160 76" stroke="#f05c1a" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <!-- arm left relaxed -->
-          <path d="M88 66 Q76 74 68 80" stroke="#f05c1a" stroke-width="14" stroke-linecap="round" fill="none"/>
-          <!-- hand -->
-          <ellipse cx="162" cy="78" rx="8" ry="6" fill="#f0ccb4"/>
-          <!-- neck -->
-          <rect x="101" y="32" width="22" height="16" rx="6" fill="#f0ccb4"/>
-          <!-- head -->
-          <circle cx="112" cy="22" r="20" fill="#f0ccb4"/>
-          <!-- hair -->
-          <path d="M94 18 C96 6 104 2 112 2 C120 2 128 6 130 18 C124 10 118 8 112 8 C106 8 100 10 94 18Z" fill="#2a1a0a"/>
-          <!-- eyes -->
-          <ellipse cx="106" cy="20" rx="3.5" ry="4" fill="#2a1a0a"/>
-          <ellipse cx="118" cy="20" rx="3.5" ry="4" fill="#2a1a0a"/>
-          <circle cx="107" cy="19" r="1.2" fill="rgba(255,255,255,0.85)"/>
-          <circle cx="119" cy="19" r="1.2" fill="rgba(255,255,255,0.85)"/>
-          <!-- smile -->
-          <path d="M106 30 Q112 36 118 30" stroke="#c07050" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <!-- speech bubble -->
-          <rect x="298" y="14" width="86" height="52" rx="10" fill="white" stroke="#dce9fb" stroke-width="2"/>
-          <path d="M310 66 L300 78 L326 66" fill="white" stroke="#dce9fb" stroke-width="2" stroke-linejoin="round"/>
-          <text x="341" y="38" text-anchor="middle" font-size="16" font-weight="900" fill="#1762c4" font-family="sans-serif">AI</text>
-          <text x="341" y="56" text-anchor="middle" font-size="10" fill="#4e6280" font-family="sans-serif">学べた！</text>
-          <!-- stars (geometric) -->
-          <text x="300" y="100" font-size="12" fill="#ffd580" font-family="sans-serif" letter-spacing="2">★★★★★</text>
+          <rect width="400" height="130" rx="10" fill="#f0f6ff"/>
+          <circle cx="360" cy="10" r="80" fill="rgba(23,98,196,0.07)"/>
+          <circle cx="36" cy="118" r="54" fill="rgba(240,92,26,0.05)"/>
+          <rect x="128" y="12" width="180" height="114" rx="10" fill="#1762c4"/>
+          <rect x="138" y="22" width="160" height="90" rx="6" fill="#dce9fb"/>
+          <rect x="106" y="124" width="224" height="6" rx="3" fill="#0d4a9c" opacity="0.4"/>
+          <rect x="154" y="94" width="16" height="16" rx="3" fill="#f05c1a" opacity="0.75"/>
+          <rect x="174" y="79" width="16" height="31" rx="3" fill="#1762c4" opacity="0.8"/>
+          <rect x="194" y="65" width="16" height="45" rx="3" fill="#f05c1a" opacity="0.9"/>
+          <rect x="214" y="73" width="16" height="37" rx="3" fill="#1762c4" opacity="0.75"/>
+          <rect x="234" y="80" width="16" height="30" rx="3" fill="#f05c1a" opacity="0.7"/>
+          <rect x="254" y="84" width="16" height="26" rx="3" fill="#1762c4" opacity="0.65"/>
+          <line x1="148" y1="112" x2="280" y2="112" stroke="rgba(23,98,196,0.2)" stroke-width="1.5"/>
+          <rect x="146" y="30" width="48" height="22" rx="11" fill="#f05c1a"/>
+          <text x="170" y="46" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="sans-serif">AI研修</text>
+          <rect x="200" y="34" width="64" height="8" rx="4" fill="rgba(23,98,196,0.2)"/>
+          <rect x="200" y="46" width="48" height="7" rx="3" fill="rgba(23,98,196,0.14)"/>
+          <circle cx="62" cy="40" r="26" fill="#1762c4" opacity="0.9"/>
+          <rect x="36" y="64" width="52" height="62" rx="14" fill="#1762c4" opacity="0.85"/>
+          <circle cx="52" cy="36" r="5" fill="white"/>
+          <circle cx="72" cy="36" r="5" fill="white"/>
+          <path d="M52 52 Q62 60 72 52" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M88 80 Q110 92 130 100" stroke="#1762c4" stroke-width="18" stroke-linecap="round" fill="none"/>
+          <rect x="328" y="18" width="62" height="36" rx="8" fill="#ffd580"/>
+          <text x="359" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#0d4a9c" font-family="sans-serif">11時間</text>
+          <text x="359" y="47" text-anchor="middle" font-size="9" fill="#0d4a9c" font-family="sans-serif">能力開発</text>
+          <text x="355" y="86" text-anchor="middle" font-size="14" fill="#ffd580" font-family="sans-serif" letter-spacing="1">★★★★</text>
+          <text x="358" y="104" text-anchor="middle" font-size="9" fill="#4e6280" font-family="sans-serif">満足度 4.7</text>
         </svg>
         <div class="svc-tag">課題：AIを使いこなすAI人材がいない</div>
         <div class="svc-num">SOLUTION 01</div>
@@ -580,75 +487,42 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
         <p>座学6時間＋実践5時間で、生成AIの基礎から実務での活用まで体系的に習得。研修翌日から即実践できるAI人材を育成します。</p>
       </div>
       <div class="svc-card">
-        <!-- illustration: support person with chat bubbles and calendar -->
+        <!-- flat support illustration -->
         <svg class="svc-illus" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="400" height="130" rx="10" fill="var(--blue-pale)"/>
-          <circle cx="60" cy="20" r="55" fill="rgba(240,92,26,0.06)"/>
-          <circle cx="350" cy="110" r="45" fill="rgba(23,98,196,0.06)"/>
-          <!-- calendar card -->
-          <rect x="230" y="18" width="120" height="100" rx="10" fill="white" stroke="#dce9fb" stroke-width="2"/>
-          <rect x="230" y="18" width="120" height="28" rx="10" fill="#1762c4"/>
-          <rect x="230" y="36" width="120" height="10" fill="#1762c4"/>
-          <text x="290" y="36" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="sans-serif">1年間サポート</text>
-          <!-- calendar grid -->
-          <text x="246" y="62" font-size="9" fill="#4e6280" font-family="sans-serif">月</text>
-          <text x="264" y="62" font-size="9" fill="#4e6280" font-family="sans-serif">火</text>
-          <text x="282" y="62" font-size="9" fill="#4e6280" font-family="sans-serif">水</text>
-          <text x="300" y="62" font-size="9" fill="#4e6280" font-family="sans-serif">木</text>
-          <text x="318" y="62" font-size="9" fill="#4e6280" font-family="sans-serif">金</text>
-          <text x="337" y="62" font-size="9" fill="#f05c1a" font-family="sans-serif">土</text>
-          <circle cx="249" cy="76" r="7" fill="#f05c1a"/>
-          <text x="249" y="80" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">✓</text>
-          <circle cx="268" cy="76" r="7" fill="#dce9fb"/>
-          <text x="268" y="80" text-anchor="middle" font-size="8" fill="#1762c4" font-family="sans-serif">8</text>
-          <circle cx="287" cy="76" r="7" fill="#dce9fb"/>
-          <text x="287" y="80" text-anchor="middle" font-size="8" fill="#1762c4" font-family="sans-serif">9</text>
-          <circle cx="306" cy="76" r="7" fill="#f05c1a"/>
-          <text x="306" y="80" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">✓</text>
-          <circle cx="325" cy="76" r="7" fill="#dce9fb"/>
-          <text x="325" y="80" text-anchor="middle" font-size="8" fill="#1762c4" font-family="sans-serif">11</text>
-          <rect x="238" y="90" width="100" height="6" rx="3" fill="#dce9fb"/>
-          <rect x="238" y="100" width="70" height="6" rx="3" fill="#dce9fb" opacity="0.6"/>
-          <rect x="238" y="110" width="84" height="6" rx="3" fill="#dce9fb" opacity="0.4"/>
-          <!-- person (right, with headset) -->
-          <ellipse cx="110" cy="127" rx="28" ry="6" fill="rgba(0,0,0,0.07)"/>
-          <!-- legs -->
-          <rect x="96" y="88" width="15" height="38" rx="7" fill="#1762c4"/>
-          <rect x="115" y="88" width="15" height="38" rx="7" fill="#1762c4"/>
-          <ellipse cx="103" cy="124" rx="14" ry="6" fill="#0d4a9c"/>
-          <ellipse cx="122" cy="124" rx="14" ry="6" fill="#0d4a9c"/>
-          <!-- body -->
-          <rect x="86" y="44" width="50" height="50" rx="12" fill="#1762c4"/>
-          <!-- arms -->
-          <path d="M86 62 Q64 74 52 86" stroke="#1762c4" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <path d="M136 62 Q156 72 166 80" stroke="#1762c4" stroke-width="14" stroke-linecap="round" fill="none"/>
-          <!-- tablet in hand -->
-          <rect x="50" y="80" width="46" height="34" rx="6" fill="white" stroke="#dce9fb" stroke-width="2"/>
-          <text x="73" y="102" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#1762c4">💬</text>
-          <!-- neck -->
-          <rect x="101" y="30" width="20" height="16" rx="6" fill="#f5c8a8"/>
-          <!-- head -->
-          <circle cx="111" cy="20" r="20" fill="#f5c8a8"/>
-          <!-- hair short -->
-          <path d="M93 16 C95 4 103 0 111 0 C119 0 127 4 129 16 C123 8 117 6 111 6 C105 6 99 8 93 16Z" fill="#5a3010"/>
-          <!-- headset arc -->
-          <path d="M92 18 Q111 6 130 18" stroke="#1762c4" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <circle cx="92" cy="20" r="6" fill="#f05c1a"/>
-          <circle cx="130" cy="20" r="6" fill="#f05c1a"/>
-          <!-- eyes -->
-          <ellipse cx="105" cy="20" rx="3" ry="3.5" fill="#2a1a0a"/>
-          <ellipse cx="117" cy="20" rx="3" ry="3.5" fill="#2a1a0a"/>
-          <circle cx="106" cy="19" r="1" fill="rgba(255,255,255,0.9)"/>
-          <circle cx="118" cy="19" r="1" fill="rgba(255,255,255,0.9)"/>
-          <!-- smile -->
-          <path d="M104 29 Q111 35 118 29" stroke="#c07050" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <!-- chat bubbles floating -->
-          <rect x="172" y="22" width="50" height="28" rx="8" fill="#f05c1a"/>
-          <path d="M178 50 L170 58 L190 50" fill="#f05c1a"/>
-          <text x="197" y="38" text-anchor="middle" font-size="9" fill="white" font-family="sans-serif">いつでも</text>
-          <text x="197" y="50" text-anchor="middle" font-size="9" fill="white" font-family="sans-serif">相談OK!</text>
-          <rect x="170" y="68" width="54" height="20" rx="7" fill="#ffd580"/>
-          <text x="197" y="82" text-anchor="middle" font-size="9" fill="#0d4a9c" font-weight="700" font-family="sans-serif">月次レポート</text>
+          <rect width="400" height="130" rx="10" fill="#fff4ee"/>
+          <circle cx="40" cy="15" r="65" fill="rgba(240,92,26,0.07)"/>
+          <circle cx="368" cy="115" r="55" fill="rgba(23,98,196,0.05)"/>
+          <circle cx="62" cy="65" r="38" fill="rgba(240,92,26,0.12)"/>
+          <path d="M38 60 Q62 40 86 60" stroke="#f05c1a" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <rect x="28" y="55" width="22" height="20" rx="10" fill="#f05c1a"/>
+          <rect x="80" y="55" width="22" height="20" rx="10" fill="#f05c1a"/>
+          <path d="M42 74 Q44 86 50 88" stroke="#f05c1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <circle cx="51" cy="90" r="5" fill="#f05c1a"/>
+          <rect x="116" y="10" width="118" height="110" rx="10" fill="white" stroke="#dce9fb" stroke-width="2"/>
+          <rect x="116" y="10" width="118" height="30" rx="10" fill="#f05c1a"/>
+          <rect x="116" y="29" width="118" height="11" fill="#f05c1a"/>
+          <text x="175" y="29" text-anchor="middle" font-size="10" font-weight="700" fill="white" font-family="sans-serif">1年間サポート</text>
+          <circle cx="136" cy="62" r="9" fill="#f05c1a"/>
+          <text x="136" y="66" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">v</text>
+          <circle cx="158" cy="62" r="9" fill="#dce9fb"/>
+          <circle cx="180" cy="62" r="9" fill="#dce9fb"/>
+          <circle cx="202" cy="62" r="9" fill="#f05c1a"/>
+          <text x="202" y="66" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">v</text>
+          <circle cx="136" cy="86" r="9" fill="#dce9fb"/>
+          <circle cx="158" cy="86" r="9" fill="#f05c1a"/>
+          <text x="158" y="90" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">v</text>
+          <circle cx="180" cy="86" r="9" fill="#dce9fb"/>
+          <circle cx="202" cy="86" r="9" fill="#dce9fb"/>
+          <rect x="126" y="103" width="96" height="6" rx="3" fill="#dce9fb"/>
+          <rect x="252" y="12" width="134" height="34" rx="10" fill="white" stroke="#dce9fb" stroke-width="1.5"/>
+          <path d="M262 46 L254 56 L278 46" fill="white" stroke="#dce9fb" stroke-width="1.5" stroke-linejoin="round"/>
+          <text x="319" y="25" text-anchor="middle" font-size="9" fill="#1762c4" font-family="sans-serif">チャット相談</text>
+          <text x="319" y="38" text-anchor="middle" font-size="9" fill="#1762c4" font-family="sans-serif">いつでも受付！</text>
+          <rect x="252" y="64" width="134" height="30" rx="10" fill="#f05c1a"/>
+          <text x="319" y="76" text-anchor="middle" font-size="9" fill="white" font-family="sans-serif">月次レポート</text>
+          <text x="319" y="88" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="sans-serif">毎月お届け</text>
+          <rect x="252" y="102" width="134" height="22" rx="8" fill="rgba(23,98,196,0.1)" stroke="#dce9fb" stroke-width="1.5"/>
+          <text x="319" y="117" text-anchor="middle" font-size="9" fill="#1762c4" font-weight="600" font-family="sans-serif">オンライン相談会 計4回</text>
         </svg>
         <div class="svc-tag">課題：研修がピークとなり組織でAIが浸透しない</div>
         <div class="svc-num">SOLUTION 02</div>
@@ -725,32 +599,23 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
     <div class="str-grid">
       <div class="str-card">
         <!-- illustration: trophy + 5 people + stars -->
-        <svg class="str-illus" viewBox="0 0 280 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="280" height="96" rx="8" fill="linear-gradient(135deg,#f7faff,#dce9fb)"/>
-          <defs><linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0f6ff"/><stop offset="100%" stop-color="#dce9fb"/></linearGradient></defs>
-          <rect width="280" height="96" rx="8" fill="url(#bg1)"/>
-          <!-- trophy -->
-          <rect x="104" y="56" width="22" height="8" rx="3" fill="#c8a040"/>
-          <rect x="96" y="64" width="38" height="8" rx="4" fill="#c8a040"/>
-          <!-- trophy cup -->
-          <path d="M106 20 Q106 54 115 54 Q124 54 124 20 Z" fill="#ffd580"/>
-          <path d="M100 24 Q92 24 92 36 Q92 48 106 52" stroke="#ffd580" stroke-width="7" fill="none" stroke-linecap="round"/>
-          <path d="M130 24 Q138 24 138 36 Q138 48 124 52" stroke="#ffd580" stroke-width="7" fill="none" stroke-linecap="round"/>
-          <rect x="104" y="18" width="22" height="4" rx="2" fill="#f0c040"/>
-          <text x="115" y="44" text-anchor="middle" font-size="16" fill="#f05c1a" font-family="sans-serif" font-weight="900">1位</text>
-          <!-- 5 person silhouettes -->
-          <circle cx="32" cy="36" r="10" fill="#1762c4" opacity="0.85"/>
-          <rect x="22" y="48" width="20" height="30" rx="10" fill="#1762c4" opacity="0.75"/>
-          <circle cx="62" cy="32" r="11" fill="#f05c1a" opacity="0.9"/>
-          <rect x="51" y="45" width="22" height="34" rx="11" fill="#f05c1a" opacity="0.8"/>
-          <circle cx="92" cy="36" r="10" fill="#1762c4" opacity="0.8"/>
-          <rect x="82" y="48" width="20" height="30" rx="10" fill="#1762c4" opacity="0.7"/>
-          <!-- stars -->
-          <text x="160" y="32" font-size="13" fill="#ffd580" font-family="sans-serif" letter-spacing="2">★★★★★</text>
-          <text x="185" y="52" text-anchor="middle" font-size="20" font-weight="900" fill="#f05c1a" font-family="sans-serif">4.7</text>
-          <text x="185" y="68" text-anchor="middle" font-size="10" fill="#4e6280" font-family="sans-serif">満足度</text>
-          <text x="240" y="52" text-anchor="middle" font-size="20" font-weight="900" fill="#1762c4" font-family="sans-serif">100+</text>
-          <text x="240" y="68" text-anchor="middle" font-size="10" fill="#4e6280" font-family="sans-serif">社</text>
+        <svg class="str-illus" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="38" fill="#fff4ee"/>
+          <!-- trophy handles -->
+          <path d="M20 22 Q8 22 8 36 Q8 48 20 50" stroke="#ffd580" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M60 22 Q72 22 72 36 Q72 48 60 50" stroke="#ffd580" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <!-- cup body -->
+          <path d="M18 16 Q17 50 40 56 Q63 50 62 16 Z" fill="#ffd580"/>
+          <!-- cup rim -->
+          <rect x="16" y="13" width="48" height="8" rx="4" fill="#f0c040"/>
+          <!-- cup shine -->
+          <path d="M26 24 Q24 42 40 52" stroke="rgba(255,255,255,0.5)" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- stem + base -->
+          <rect x="33" y="56" width="14" height="10" rx="3" fill="#c8a030"/>
+          <rect x="24" y="64" width="32" height="8" rx="4" fill="#c8a030"/>
+          <!-- 1st badge -->
+          <circle cx="40" cy="36" r="12" fill="rgba(255,255,255,0.5)"/>
+          <text x="40" y="41" text-anchor="middle" font-size="13" font-weight="900" fill="#0d4a9c" font-family="sans-serif">1</text>
         </svg>
         <div class="str-num">01</div>
         <div class="str-tag">実績</div>
@@ -759,44 +624,27 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       </div>
       <div class="str-card">
         <!-- illustration: person with gear / wrench building custom solution -->
-        <svg class="str-illus" viewBox="0 -22 280 118" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff4ee"/><stop offset="100%" stop-color="#ffe8d6"/></linearGradient></defs>
-          <rect y="-22" width="280" height="118" rx="8" fill="url(#bg2)"/>
-          <!-- large gear -->
-          <circle cx="80" cy="52" r="30" fill="none" stroke="#f05c1a" stroke-width="10" opacity="0.2"/>
-          <circle cx="80" cy="52" r="16" fill="rgba(240,92,26,0.15)"/>
-          <circle cx="80" cy="52" r="8" fill="#f05c1a" opacity="0.6"/>
-          <!-- gear teeth (simplified) -->
-          <rect x="76" y="16" width="8" height="12" rx="4" fill="#f05c1a" opacity="0.4"/>
-          <rect x="76" y="72" width="8" height="12" rx="4" fill="#f05c1a" opacity="0.4"/>
-          <rect x="44" y="48" width="12" height="8" rx="4" fill="#f05c1a" opacity="0.4"/>
-          <rect x="104" y="48" width="12" height="8" rx="4" fill="#f05c1a" opacity="0.4"/>
-          <rect x="51" y="26" width="10" height="10" rx="4" fill="#f05c1a" opacity="0.3" transform="rotate(45 56 31)"/>
-          <rect x="99" y="26" width="10" height="10" rx="4" fill="#f05c1a" opacity="0.3" transform="rotate(45 104 31)"/>
-          <rect x="51" y="62" width="10" height="10" rx="4" fill="#f05c1a" opacity="0.3" transform="rotate(45 56 67)"/>
-          <rect x="99" y="62" width="10" height="10" rx="4" fill="#f05c1a" opacity="0.3" transform="rotate(45 104 67)"/>
-          <!-- small gears -->
-          <circle cx="130" cy="30" r="16" fill="none" stroke="#1762c4" stroke-width="6" opacity="0.25"/>
-          <circle cx="130" cy="30" r="8" fill="rgba(23,98,196,0.2)"/>
-          <!-- person (right) -->
-          <ellipse cx="210" cy="92" rx="26" ry="5" fill="rgba(0,0,0,0.07)"/>
-          <rect x="196" y="60" width="14" height="32" rx="7" fill="#1762c4"/>
-          <rect x="214" y="60" width="14" height="32" rx="7" fill="#1762c4"/>
-          <rect x="186" y="22" width="48" height="44" rx="12" fill="#1762c4"/>
-          <path d="M186 38 Q165 50 152 60" stroke="#1762c4" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <path d="M234 38 Q255 44 264 52" stroke="#1762c4" stroke-width="14" stroke-linecap="round" fill="none"/>
-          <!-- wrench in hand -->
-          <rect x="140" y="52" width="20" height="8" rx="4" fill="#ffd580" transform="rotate(-30 140 52)"/>
-          <circle cx="138" cy="56" r="7" fill="none" stroke="#ffd580" stroke-width="4"/>
-          <rect x="200" y="6" width="20" height="18" rx="6" fill="#f0ccb4"/>
-          <circle cx="210" cy="4" r="18" fill="#f0ccb4"/>
-          <path d="M194 0 C196 -10 203 -14 210 -14 C217 -14 224 -10 226 0 C220 -6 215 -8 210 -8 C205 -8 200 -6 194 0Z" fill="#2a1a0a"/>
-          <ellipse cx="204" cy="3" rx="3" ry="3.5" fill="#2a1a0a"/>
-          <ellipse cx="216" cy="3" rx="3" ry="3.5" fill="#2a1a0a"/>
-          <path d="M204 14 Q210 20 216 14" stroke="#c07050" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <!-- tags floating -->
-          <rect x="154" y="10" width="52" height="18" rx="6" fill="#1762c4"/>
-          <text x="180" y="22" text-anchor="middle" font-size="9" fill="white" font-family="sans-serif" font-weight="600">カスタマイズ</text>
+        <svg class="str-illus" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="38" fill="#f0f6ff"/>
+          <!-- main gear -->
+          <circle cx="40" cy="40" r="20" fill="none" stroke="#1762c4" stroke-width="9"/>
+          <circle cx="40" cy="40" r="8" fill="#1762c4"/>
+          <circle cx="40" cy="40" r="4" fill="#f0f6ff"/>
+          <!-- 8 teeth of main gear -->
+          <rect x="36.5" y="6" width="7" height="13" rx="3.5" fill="#1762c4"/>
+          <rect x="36.5" y="61" width="7" height="13" rx="3.5" fill="#1762c4"/>
+          <rect x="6" y="36.5" width="13" height="7" rx="3.5" fill="#1762c4"/>
+          <rect x="61" y="36.5" width="13" height="7" rx="3.5" fill="#1762c4"/>
+          <rect x="36.5" y="6" width="7" height="13" rx="3.5" fill="#1762c4" transform="rotate(45 40 40)"/>
+          <rect x="36.5" y="6" width="7" height="13" rx="3.5" fill="#1762c4" transform="rotate(-45 40 40)"/>
+          <rect x="36.5" y="61" width="7" height="13" rx="3.5" fill="#1762c4" transform="rotate(45 40 40)"/>
+          <!-- small orange gear (top-right) -->
+          <circle cx="64" cy="18" r="11" fill="none" stroke="#f05c1a" stroke-width="5"/>
+          <circle cx="64" cy="18" r="4" fill="#f05c1a"/>
+          <rect x="61" y="5" width="6" height="9" rx="3" fill="#f05c1a"/>
+          <rect x="61" y="22" width="6" height="9" rx="3" fill="#f05c1a"/>
+          <rect x="51" y="15" width="9" height="6" rx="3" fill="#f05c1a"/>
+          <rect x="68" y="15" width="9" height="6" rx="3" fill="#f05c1a"/>
         </svg>
         <div class="str-num">02</div>
         <div class="str-tag">カスタマイズ</div>
@@ -805,64 +653,21 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       </div>
       <div class="str-card">
         <!-- illustration: two people shaking hands / meeting face-to-face -->
-        <svg class="str-illus" viewBox="0 -22 280 118" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0f6ff"/><stop offset="100%" stop-color="#e0ecff"/></linearGradient></defs>
-          <rect y="-22" width="280" height="118" rx="8" fill="url(#bg3)"/>
-          <!-- table -->
-          <rect x="90" y="64" width="100" height="10" rx="5" fill="#c8d8f2"/>
-          <rect x="100" y="73" width="10" height="20" rx="4" fill="#c8d8f2"/>
-          <rect x="170" y="73" width="10" height="20" rx="4" fill="#c8d8f2"/>
-          <!-- laptop on table -->
-          <rect x="123" y="40" width="34" height="24" rx="4" fill="#1762c4" opacity="0.85"/>
-          <rect x="118" y="63" width="44" height="5" rx="2.5" fill="#0d4a9c" opacity="0.6"/>
-          <rect x="127" y="46" width="26" height="14" rx="2" fill="#dce9fb"/>
-          <rect x="130" y="50" width="20" height="2" rx="1" fill="rgba(23,98,196,0.4)"/>
-          <rect x="130" y="54" width="14" height="2" rx="1" fill="rgba(23,98,196,0.3)"/>
-          <rect x="130" y="58" width="18" height="2" rx="1" fill="rgba(23,98,196,0.35)"/>
-          <!-- PERSON LEFT (lecturer) -->
-          <ellipse cx="64" cy="92" rx="24" ry="5" fill="rgba(0,0,0,0.08)"/>
-          <rect x="52" y="60" width="13" height="32" rx="6" fill="#0d4a9c"/>
-          <rect x="68" y="60" width="13" height="32" rx="6" fill="#0d4a9c"/>
-          <rect x="44" y="18" width="44" height="48" rx="12" fill="#0d4a9c"/>
-          <!-- arm extended forward -->
-          <path d="M88 36 Q104 46 116 52" stroke="#0d4a9c" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <ellipse cx="118" cy="54" rx="8" ry="7" fill="#e8bca4"/>
-          <!-- arm left -->
-          <path d="M44 36 Q30 48 22 58" stroke="#0d4a9c" stroke-width="14" stroke-linecap="round" fill="none"/>
-          <rect x="56" y="4" width="20" height="16" rx="6" fill="#f0ccb4"/>
-          <circle cx="66" cy="2" r="16" fill="#f0ccb4"/>
-          <path d="M52 -2 C54 -12 60 -16 66 -16 C72 -16 78 -12 80 -2 C74 -8 70 -10 66 -10 C62 -10 58 -8 52 -2Z" fill="#1a0f08"/>
-          <ellipse cx="61" cy="2" rx="3" ry="3.5" fill="#1a0f08"/>
-          <ellipse cx="71" cy="2" rx="3" ry="3.5" fill="#1a0f08"/>
-          <path d="M61 12 Q66 18 71 12" stroke="#c07050" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <ellipse cx="50" cy="4" rx="5" ry="6" fill="#e8bca4"/>
-          <ellipse cx="82" cy="4" rx="5" ry="6" fill="#e8bca4"/>
-          <!-- PERSON RIGHT (student) -->
-          <ellipse cx="216" cy="92" rx="24" ry="5" fill="rgba(0,0,0,0.07)"/>
-          <rect x="204" y="60" width="13" height="32" rx="6" fill="#1762c4"/>
-          <rect x="220" y="60" width="13" height="32" rx="6" fill="#1762c4"/>
-          <rect x="196" y="18" width="44" height="48" rx="12" fill="#1762c4"/>
-          <!-- arm extended forward -->
-          <path d="M196 36 Q180 46 168 52" stroke="#1762c4" stroke-width="16" stroke-linecap="round" fill="none"/>
-          <ellipse cx="166" cy="54" rx="8" ry="7" fill="#f5c8a8"/>
-          <!-- arm right -->
-          <path d="M240 36 Q254 48 262 58" stroke="#1762c4" stroke-width="14" stroke-linecap="round" fill="none"/>
-          <!-- book/tablet in hand -->
-          <rect x="254" y="52" width="22" height="30" rx="5" fill="#ffd580" opacity="0.9"/>
-          <rect x="258" y="57" width="14" height="2" rx="1" fill="rgba(23,98,196,0.5)"/>
-          <rect x="258" y="62" width="10" height="2" rx="1" fill="rgba(23,98,196,0.4)"/>
-          <rect x="214" y="4" width="20" height="16" rx="6" fill="#f5c8a8"/>
-          <circle cx="218" cy="2" r="16" fill="#f5c8a8"/>
-          <path d="M204 -2 C206 -12 211 -16 218 -16 C225 -16 230 -12 232 -2 C226 -8 222 -10 218 -10 C214 -10 210 -8 204 -2Z" fill="#7a3510"/>
-          <ellipse cx="213" cy="2" rx="3" ry="3.5" fill="#1a0f08"/>
-          <ellipse cx="223" cy="2" rx="3" ry="3.5" fill="#1a0f08"/>
-          <path d="M213 12 Q218 18 223 12" stroke="#c07050" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <ellipse cx="202" cy="4" rx="5" ry="6" fill="#e8b89a"/>
-          <ellipse cx="234" cy="4" rx="5" ry="6" fill="#e8b89a"/>
-          <!-- handshake icon -->
-          <circle cx="140" cy="54" r="12" fill="rgba(240,92,26,0.15)" stroke="#f05c1a" stroke-width="2"/>
-          <path d="M133 54 L137 51 L140 54 L143 51 L147 54" stroke="#f05c1a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M133 57 Q140 62 147 57" stroke="#f05c1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <svg class="str-illus" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="40" cy="40" r="38" fill="#f0f6ff"/>
+          <!-- person A (left, blue) -->
+          <circle cx="20" cy="24" r="11" fill="#1762c4"/>
+          <rect x="6" y="36" width="28" height="34" rx="10" fill="#1762c4"/>
+          <!-- person B (right, orange) -->
+          <circle cx="60" cy="24" r="11" fill="#f05c1a"/>
+          <rect x="46" y="36" width="28" height="34" rx="10" fill="#f05c1a"/>
+          <!-- A hand reaching right -->
+          <path d="M34 50 Q40 52 44 56" stroke="#1762c4" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <!-- B hand reaching left -->
+          <path d="M46 50 Q40 52 36 56" stroke="#f05c1a" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <!-- center connection dot -->
+          <circle cx="40" cy="56" r="8" fill="white" stroke="#ffd580" stroke-width="3"/>
+          <path d="M36 56 L38.5 59.5 L44 52" stroke="#ffd580" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div class="str-num">03</div>
         <div class="str-tag">対面</div>
