@@ -34,7 +34,7 @@ section{padding:80px 0}
 .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.7)}
 
 /* TOP BAR */
-.top-bar{background:var(--blue-dark);color:rgba(255,255,255,.75);font-size:.75rem;text-align:center;padding:6px 24px;letter-spacing:.03em;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.top-bar{background:var(--blue-dark);color:rgba(255,255,255,.75);font-size:.75rem;text-align:center;padding:6px 24px;letter-spacing:.03em;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:nowrap;white-space:nowrap}
 .top-bar strong{color:var(--white);font-weight:700}
 .top-bar span{color:rgba(255,255,255,.45)}
 
@@ -266,16 +266,20 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
   .hs-item:nth-child(1),.hs-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12)}
   .rm-steps{flex-wrap:wrap;overflow-x:hidden;gap:8px}
   .rm-step{min-width:0;flex:0 0 calc(50% - 4px);padding:0 4px}
+  .top-bar{font-size:.65rem;gap:6px;padding:5px 12px;letter-spacing:.01em}
+  .header-inner{justify-content:center;gap:24px}
   .logo-badge{display:none}
   .h-cta-f{display:none}
   .h-cta-s{display:inline}
   .h-cta{padding:9px 18px;font-size:.83rem}
   .hero-sub{max-width:100%}
-  .hero-actions{flex-direction:column;gap:10px}
-  .hero-actions .btn{text-align:center}
+  .hero-actions{flex-direction:column;gap:10px;width:100%}
+  .hero-actions .btn{text-align:center;width:100%;box-sizing:border-box}
+  .eyebrow{font-size:.68rem;padding:4px 12px;margin-bottom:14px}
+  .hero-inner{padding-bottom:20px}
 }
 @media(max-width:480px){
-  #hero{padding:56px 0 0}
+  #hero{padding:28px 0 0}
   .container{padding:0 14px}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
   .hs-num{font-size:1.8rem}
@@ -296,8 +300,6 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
     <span><strong>株式会社ビジョン</strong></span>
     <span>|</span>
     <span>東証プライム上場（証券コード：9416）</span>
-    <span>|</span>
-    <span>株式会社ビジョン × 株式会社KANNON 共同提供</span>
   </div>
   <div class="container header-inner">
     <a href="#" class="logo">
