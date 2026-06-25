@@ -6,15 +6,17 @@
 <title>AIリスキリング研修 | AIまるごと伴走プログラム | 株式会社ビジョン × 株式会社KANNON</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
-body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;color:#172340;background:#fff;line-height:1.7;overflow-x:hidden;min-width:0}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;max-width:100%}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;color:#09090b;background:#fff;line-height:1.7;overflow-x:hidden;min-width:0;max-width:100%;position:relative}
+section,header,footer{overflow-x:hidden;position:relative}
+img,svg{max-width:100%}
 :root{
-  --blue:#1762c4;--blue-dark:#0d4a9c;--blue-mid:#2272d8;
-  --blue-lt:#dce9fb;--blue-pale:#f0f6ff;--blue-xs:#f7faff;
-  --orange:#f05c1a;--orange-lt:#ff7a3d;--orange-tint:#fff4ee;
+  --blue:#18181b;--blue-dark:#09090b;--blue-mid:#27272a;
+  --blue-lt:#e4e4e7;--blue-pale:#f4f4f5;--blue-xs:#fafafa;
+  --orange:#18181b;--orange-lt:#3f3f46;--orange-tint:#f0f0f1;
   --white:#fff;
-  --text:#172340;--text-mid:#3a4d6b;--text-light:#4e6280;
-  --border:#d4e2f4;--alt:#f0f6ff;
+  --text:#09090b;--text-mid:#3f3f46;--text-light:#71717a;
+  --border:#e4e4e7;--alt:#f4f4f5;
 }
 h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;line-height:1.2;text-wrap:balance}
 h2{font-size:clamp(1.5rem,3.5vw,2.3rem);font-weight:800;line-height:1.3;text-wrap:balance}
@@ -27,8 +29,8 @@ section{padding:80px 0}
 /* BUTTONS */
 .btn{display:inline-block;padding:15px 36px;border-radius:6px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;border:none;transition:opacity .2s,transform .15s,box-shadow .15s;letter-spacing:.03em;font-family:inherit}
 .btn:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
-.btn-primary{background:var(--orange);color:var(--white);box-shadow:0 3px 10px rgba(240,92,26,.3)}
-.btn-blue{background:var(--blue);color:var(--white);box-shadow:0 3px 10px rgba(23,98,196,.25)}
+.btn-primary{background:var(--orange);color:var(--white);box-shadow:0 3px 10px rgba(0,0,0,.2)}
+.btn-blue{background:var(--blue);color:var(--white);box-shadow:0 3px 10px rgba(0,0,0,.15)}
 .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.7)}
 
 /* TOP BAR */
@@ -37,36 +39,35 @@ section{padding:80px 0}
 .top-bar span{color:rgba(255,255,255,.45)}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(23,98,196,.08)}
+header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 0 var(--border)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
 .logo{font-size:1.05rem;font-weight:900;color:var(--blue-dark);text-decoration:none;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:8px}
 .logo-badge{background:var(--blue-pale);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:.7rem;font-weight:700;color:var(--blue);letter-spacing:.04em}
 nav{display:flex;align-items:center;gap:2px;flex-wrap:nowrap}
 nav a{color:var(--text-mid);text-decoration:none;font-size:.82rem;font-weight:600;padding:6px 10px;border-radius:4px;transition:color .15s,background .15s;white-space:nowrap}
 nav a:hover{color:var(--blue);background:var(--blue-pale)}
-nav a.nav-vws{color:var(--orange);border:1px solid rgba(240,92,26,.3);border-radius:4px}
-nav a.nav-vws:hover{background:var(--orange-tint)}
-.h-cta{background:var(--orange);color:var(--white);padding:9px 20px;border-radius:6px;font-size:.83rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:opacity .2s,box-shadow .2s;box-shadow:0 2px 8px rgba(240,92,26,.3)}
-.h-cta:hover{opacity:.88;box-shadow:0 4px 14px rgba(240,92,26,.4)}
+nav a.nav-vws{color:var(--text);border:1px solid var(--border);border-radius:4px}
+nav a.nav-vws:hover{background:var(--alt)}
+.h-cta{background:var(--orange);color:var(--white);padding:9px 20px;border-radius:6px;font-size:.83rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:opacity .2s,box-shadow .2s;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.h-cta:hover{opacity:.88;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 
 /* HERO */
-#hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-mid) 60%,#3390e8 100%);position:relative;overflow:hidden;padding:72px 0 0}
-#hero::before{content:'';position:absolute;top:-100px;right:-80px;width:580px;height:580px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
-.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-bottom:64px}
-.hero-visual{display:flex;justify-content:center;align-items:flex-end;overflow:visible}
-.hero-visual svg{width:100%;max-width:480px;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.25))}
+#hero{background:#111111;position:relative;overflow:hidden;padding:80px 0 0}
+#hero::before{content:'';position:absolute;top:-100px;right:-80px;width:580px;height:580px;border-radius:50%;background:rgba(255,255,255,.03);pointer-events:none}
+.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:64px;max-width:760px;margin:0 auto}
+.hero-visual{display:none}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);color:var(--white);font-size:.75rem;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:20px}
-.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--orange-lt);flex-shrink:0}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);flex-shrink:0}
 #hero h1{color:var(--white);margin-bottom:18px}
-#hero h1 em{color:#ffd580;font-style:normal}
-.hero-sub{color:rgba(255,255,255,.82);font-size:clamp(.95rem,1.8vw,1.08rem);line-height:1.9;margin-bottom:36px;max-width:520px}
-.hero-sub strong{color:var(--white)}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+#hero h1 em{color:rgba(255,255,255,.55);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.65);font-size:clamp(.95rem,1.8vw,1.08rem);line-height:1.9;margin-bottom:36px;max-width:600px}
+.hero-sub strong{color:rgba(255,255,255,.9)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 /* STATS BAR */
 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.16);margin-top:0}
 .hs-item{text-align:center;padding:28px 16px;border-right:1px solid rgba(255,255,255,.12)}
 .hs-item:last-child{border-right:none}
-.hs-num{font-size:2.4rem;font-weight:900;color:#ffd580;line-height:1;font-variant-numeric:tabular-nums;display:block}
+.hs-num{font-size:2.4rem;font-weight:900;color:#ffffff;line-height:1;font-variant-numeric:tabular-nums;display:block}
 .hs-unit{font-size:1rem;font-weight:700}
 .hs-lbl{font-size:.84rem;color:rgba(255,255,255,.78);margin-top:7px;display:block;letter-spacing:.02em}
 
@@ -77,36 +78,36 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 .sh p{color:var(--text-mid);margin:12px auto 0}
 
 /* PROBLEM */
-#problem{background:linear-gradient(135deg,var(--blue-mid) 0%,var(--blue) 100%)}
-#problem .sh-eye{color:#ffd580}
-#problem .sh h2{color:var(--white)}
-#problem .sh p{color:rgba(255,255,255,.7)}
-.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.prob-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:36px 32px;backdrop-filter:blur(4px)}
-.prob-big{font-size:3.8rem;font-weight:900;color:#ffd580;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:8px}
+#problem{background:#f4f4f5}
+#problem .sh-eye{color:var(--text-light)}
+#problem .sh h2{color:var(--text)}
+#problem .sh p{color:var(--text-mid)}
+.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.prob-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:36px 32px}
+.prob-big{font-size:3.8rem;font-weight:900;color:var(--text);line-height:1;font-variant-numeric:tabular-nums;margin-bottom:8px}
 .prob-big sub{font-size:1.3rem}
-.prob-card h3{color:var(--white);margin-bottom:10px}
-.prob-card p{color:rgba(255,255,255,.75);font-size:.93rem;max-width:100%}
+.prob-card h3{color:var(--text);margin-bottom:10px}
+.prob-card p{color:var(--text-mid);font-size:.93rem;max-width:100%}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-.chip{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 13px;font-size:.79rem;font-weight:600}
+.chip{background:var(--alt);color:var(--text-mid);border:1px solid var(--border);border-radius:20px;padding:4px 13px;font-size:.79rem;font-weight:600}
 
 /* SERVICE */
 #service{background:var(--white)}
 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .svc-card{background:var(--blue-xs);border-radius:12px;padding:38px 34px;border:2px solid var(--blue-lt);transition:border-color .2s,box-shadow .2s}
-.svc-card:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(23,98,196,.12)}
-.svc-tag{display:inline-block;background:var(--orange-tint);border:1px solid rgba(240,92,26,.2);border-radius:4px;padding:6px 12px;font-size:.85rem;color:var(--orange);font-weight:700;margin-bottom:14px}
+.svc-card:hover{border-color:var(--blue);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.svc-tag{display:inline-block;background:var(--alt);border:1px solid var(--border);border-radius:4px;padding:6px 12px;font-size:.85rem;color:var(--text-mid);font-weight:700;margin-bottom:14px}
 .svc-num{font-size:.78rem;font-weight:700;letter-spacing:.08em;color:var(--blue);margin-bottom:6px}
 .svc-hl{font-size:1.75rem;font-weight:900;color:var(--blue-dark);line-height:1.25;margin-bottom:10px}
 .svc-card p{color:var(--text-mid);font-size:.93rem;max-width:100%}
 
 /* ROADMAP */
 #roadmap{background:var(--blue-pale)}
-.rm-steps{display:flex;justify-content:space-between;overflow-x:auto;padding-bottom:8px;gap:0}
+.rm-steps{display:flex;justify-content:space-between;overflow-x:hidden;padding-bottom:8px;gap:0}
 .rm-step{flex:1;min-width:150px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 8px}
 .rm-step:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:22px;font-size:1.1rem;color:var(--border);z-index:1}
 .rm-circle{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:700;color:var(--white);margin:0 auto 14px;position:relative;z-index:2;box-shadow:0 3px 10px rgba(0,0,0,.15)}
-.c0{background:#6b9fe0}.c1{background:#3a7fcc}.c2{background:#e89040}.c3{background:#e06020}.c4{background:var(--orange)}
+.c0{background:#a1a1aa}.c1{background:#71717a}.c2{background:#52525b}.c3{background:#3f3f46}.c4{background:#09090b}
 .rm-phase{font-size:.76rem;font-weight:700;letter-spacing:.06em;color:var(--text-light);margin-bottom:4px}
 .rm-title{font-size:.95rem;font-weight:700;color:var(--blue-dark)}
 .rm-desc{font-size:.83rem;color:var(--text-mid);margin-top:6px;line-height:1.6;max-width:132px;margin-left:auto;margin-right:auto}
@@ -120,34 +121,34 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 .tr-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid var(--blue-lt)}
 .tr-dots{display:flex;gap:7px}
 .td{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--white)}
-.td-b{background:var(--blue)}.td-r{background:var(--orange)}
+.td-b{background:var(--blue)}.td-r{background:#71717a}
 .tr-card h3{color:var(--blue-dark)}
 .tr-dur{font-size:.8rem;color:var(--text-light);font-weight:600;margin-top:2px}
 .tr-list{list-style:none;display:flex;flex-direction:column;gap:10px}
 .tr-list li{display:flex;align-items:flex-start;gap:10px;font-size:.93rem;color:var(--text-mid)}
 .tr-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;margin-top:8px}
-.tr-total{text-align:center;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));border-radius:10px;padding:24px 40px;color:var(--white)}
+.tr-total{text-align:center;background:#111111;border-radius:10px;padding:24px 40px;color:var(--white)}
 .tr-total h3{color:var(--white);font-size:1.3rem}
-.tr-total span{color:#ffd580;font-size:1.9rem;font-weight:900}
+.tr-total span{color:#ffffff;font-size:1.9rem;font-weight:900}
 
 /* STRENGTHS */
 #strengths{background:var(--blue-pale)}
 .str-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.str-card{background:var(--white);border-radius:12px;padding:36px 24px;box-shadow:0 2px 14px rgba(23,98,196,.07);border:1px solid var(--blue-lt)}
-.str-num{width:46px;height:46px;background:linear-gradient(135deg,var(--blue-mid),var(--blue));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:900;margin-bottom:16px;box-shadow:0 3px 10px rgba(23,98,196,.25)}
-.str-tag{display:inline-block;background:var(--orange-tint);color:var(--orange);border-radius:4px;padding:4px 12px;font-size:.82rem;font-weight:700;margin-bottom:10px}
+.str-card{background:var(--white);border-radius:12px;padding:36px 24px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid var(--border)}
+.str-num{width:46px;height:46px;background:var(--blue-dark);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;font-weight:900;margin-bottom:16px;box-shadow:none}
+.str-tag{display:inline-block;background:var(--alt);color:var(--text-mid);border-radius:4px;padding:4px 12px;font-size:.82rem;font-weight:700;margin-bottom:10px}
 .str-card h3{color:var(--blue-dark);margin-bottom:10px}
 .str-card p{color:var(--text-mid);font-size:.9rem;max-width:100%}
 
 /* SUPPORT */
-#support{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-mid) 100%)}
-#support .sh-eye{color:#ffd580}
+#support{background:#111111}
+#support .sh-eye{color:rgba(255,255,255,.5)}
 #support .sh h2{color:var(--white)}
-#support .sh p{color:rgba(255,255,255,.7)}
+#support .sh p{color:rgba(255,255,255,.6)}
 .sup-items{display:flex;flex-direction:column;gap:14px;max-width:700px;margin:0 auto}
 .sup-item{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:22px 26px;backdrop-filter:blur(4px);transition:background .2s}
 .sup-item:hover{background:rgba(255,255,255,.18)}
-.sup-num{width:42px;height:42px;background:var(--orange);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.93rem;flex-shrink:0;box-shadow:0 3px 10px rgba(240,92,26,.4)}
+.sup-num{width:42px;height:42px;background:rgba(255,255,255,.15);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.93rem;flex-shrink:0;box-shadow:none;border:1px solid rgba(255,255,255,.25)}
 .sup-item p{color:rgba(255,255,255,.9);font-size:1rem;font-weight:600;max-width:100%}
 
 /* CASE */
@@ -164,7 +165,7 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 .case-rows li{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--white);border-radius:6px;font-size:.88rem;border:1px solid var(--border)}
 .case-rows li .lbl{color:var(--text-mid)}
 .case-rows li .val{font-weight:700;color:var(--blue-dark);font-variant-numeric:tabular-nums}
-.case-voice{background:var(--orange-tint);border:1px solid rgba(240,92,26,.15);border-radius:8px;padding:14px 18px;margin-top:14px;font-size:.85rem;color:var(--text-mid)}
+.case-voice{background:var(--alt);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin-top:14px;font-size:.85rem;color:var(--text-mid)}
 .case-voice strong{color:var(--orange);display:block;font-size:.73rem;margin-bottom:4px;font-weight:700}
 
 /* PRICING */
@@ -172,13 +173,13 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
 .pr-card{border-radius:12px;padding:40px 36px}
 .pr-std{background:var(--white);border:2px solid var(--border)}
-.pr-sub{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(23,98,196,.25)}
-.pr-sub::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,165,50,.15);pointer-events:none}
+.pr-sub{background:#111111;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.pr-sub::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none}
 .pr-lbl{font-size:.84rem;font-weight:700;letter-spacing:.06em;color:var(--text-light);margin-bottom:8px}
 .pr-sub .pr-lbl{color:rgba(255,255,255,.6)}
 .pr-price{font-size:2.7rem;font-weight:900;color:var(--blue-dark);line-height:1;font-variant-numeric:tabular-nums}
 .pr-price sub{font-size:.95rem;font-weight:600}
-.pr-sub .pr-price{color:#ffd580}
+.pr-sub .pr-price{color:#ffffff}
 .pr-old{font-size:1.05rem;font-weight:700;color:rgba(255,255,255,.4);text-decoration:line-through;font-variant-numeric:tabular-nums;margin-bottom:5px}
 .pr-period{font-size:.8rem;color:var(--text-light);margin-top:4px;margin-bottom:16px}
 .pr-sub .pr-period{color:rgba(255,255,255,.55)}
@@ -194,7 +195,7 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 .sub-flow{display:flex;flex-direction:column;max-width:650px;margin:0 auto}
 .sub-step{display:flex;gap:18px;align-items:flex-start;position:relative}
 .sub-step:not(:last-child)::after{content:'';position:absolute;left:19px;top:42px;width:2px;height:calc(100% - 10px);background:var(--blue-lt)}
-.sub-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue-mid),var(--blue));color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.87rem;flex-shrink:0;position:relative;z-index:1;box-shadow:0 2px 8px rgba(23,98,196,.3)}
+.sub-num{width:40px;height:40px;border-radius:50%;background:var(--blue-dark);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.87rem;flex-shrink:0;position:relative;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.18)}
 .sub-body{padding:7px 0 26px}
 .sub-title{font-weight:700;color:var(--blue-dark);font-size:.93rem}
 .sub-desc{font-size:.81rem;color:var(--text-mid);margin-top:3px;max-width:100%}
@@ -207,10 +208,10 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 .req-item::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
 
 /* CONTACT */
-#contact{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-mid) 100%)}
-#contact .sh-eye{color:#ffd580}
+#contact{background:#111111}
+#contact .sh-eye{color:rgba(255,255,255,.5)}
 #contact .sh h2{color:var(--white)}
-#contact .sh p{color:rgba(255,255,255,.7)}
+#contact .sh p{color:rgba(255,255,255,.6)}
 .cf{background:var(--white);border-radius:12px;padding:46px;max-width:680px;margin:0 auto;box-shadow:0 8px 40px rgba(0,0,0,.15)}
 .cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .fg{display:flex;flex-direction:column;gap:5px}
@@ -218,18 +219,18 @@ nav a.nav-vws:hover{background:var(--orange-tint)}
 label{font-size:.82rem;font-weight:700;color:var(--blue-dark);letter-spacing:.03em}
 label .req{color:var(--orange);margin-left:3px}
 input,select,textarea{border:1.5px solid var(--border);border-radius:6px;padding:11px 13px;font-size:.93rem;font-family:inherit;color:var(--text);background:var(--blue-xs);transition:border-color .15s,box-shadow .15s;width:100%}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);background:var(--white);box-shadow:0 0 0 3px rgba(23,98,196,.1)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);background:var(--white);box-shadow:0 0 0 3px rgba(0,0,0,.08)}
 textarea{min-height:110px;resize:vertical}
 .cf-submit{text-align:center;margin-top:26px}
-.btn-sub{background:var(--orange);color:var(--white);border:none;border-radius:6px;padding:15px 56px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s,transform .15s,box-shadow .15s;letter-spacing:.05em;box-shadow:0 4px 14px rgba(240,92,26,.35)}
-.btn-sub:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 20px rgba(240,92,26,.45)}
+.btn-sub{background:var(--orange);color:var(--white);border:none;border-radius:6px;padding:15px 56px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s,transform .15s,box-shadow .15s;letter-spacing:.05em;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.btn-sub:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
 .cf-note{font-size:.86rem;color:var(--text-light);margin-top:10px}
 
 /* FOOTER */
 footer{background:var(--blue-dark);padding:44px 0 24px}
 .ft-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap;margin-bottom:30px}
 .ft-logo{font-size:1rem;font-weight:900;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.ft-logo em{color:#ffd580;font-style:normal}
+.ft-logo em{color:rgba(255,255,255,.6);font-style:normal}
 .ft-brand p{color:rgba(255,255,255,.5);font-size:.79rem;max-width:260px}
 .ft-vws{display:inline-block;margin-top:10px;color:rgba(255,255,255,.7);font-size:.78rem;text-decoration:underline;text-underline-offset:3px;transition:color .15s}
 .ft-vws:hover{color:var(--white)}
@@ -238,11 +239,8 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
 .ft-links a:hover{color:var(--white)}
 .ft-copy{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;color:rgba(255,255,255,.3);font-size:.74rem;text-align:center}
 
-/* ILLUSTRATIONS */
-.svc-illus{width:100%;height:130px;display:block;margin-bottom:22px;overflow:hidden;border-radius:10px}
-.str-illus{width:80px;height:80px;display:block;margin:0 auto 18px;overflow:hidden}
-.prob-illus{width:100%;max-width:280px;margin:18px auto 0;display:block}
-.sup-illus{max-width:260px;margin:32px auto 0;display:block}
+/* SIMPLE ICONS */
+.svc-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--alt);border-radius:10px;margin-bottom:18px;color:var(--text-mid)}
 
 /* SUPPORT GRID — named class for responsive control */
 .sup-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;max-width:860px;margin:0 auto}
@@ -251,31 +249,35 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
 @media(max-width:900px){.str-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){
   section{padding:56px 0}
+  .container{width:100%;padding:0 20px;box-sizing:border-box}
   .prob-grid,.svc-grid,.tr-grid,.str-grid,.pr-grid,.sub-times,.req-grid,.cf-grid{grid-template-columns:1fr}
-  .case-box{grid-template-columns:1fr;gap:24px;padding:28px 22px}
+  .case-box{grid-template-columns:1fr;gap:24px;padding:28px 20px}
   nav{display:none}
-  .cf{padding:30px 20px}
+  .cf{padding:28px 20px;width:100%;box-sizing:border-box}
   .str-grid{grid-template-columns:1fr}
   .rm-step:not(:last-child)::after{display:none}
-  .hero-inner{grid-template-columns:1fr}
-  .hero-visual{display:none}
+  .hero-inner{padding-bottom:24px}
   .sup-grid{display:block}
   .sup-grid>svg{display:none}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
   .hs-item:nth-child(2){border-right:none}
   .hs-item:nth-child(3){border-right:1px solid rgba(255,255,255,.12)}
   .hs-item:nth-child(1),.hs-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12)}
-  .rm-steps{flex-wrap:wrap;overflow-x:hidden;gap:10px}
-  .rm-step{min-width:calc(50% - 10px);flex:0 0 calc(50% - 10px)}
+  .rm-steps{flex-wrap:wrap;overflow-x:hidden;gap:8px}
+  .rm-step{min-width:0;flex:0 0 calc(50% - 4px);padding:0 4px}
+  .hero-sub{max-width:100%}
+  .hero-actions{flex-direction:column;gap:10px}
+  .hero-actions .btn{text-align:center}
 }
 @media(max-width:480px){
-  #hero{padding:52px 0 0}
-  .hero-stats{grid-template-columns:repeat(2,1fr)}
-  .hs-num{font-size:1.9rem}
-  .hs-item{padding:20px 10px}
+  #hero{padding:56px 0 0}
   .container{padding:0 14px}
-  .rm-step{min-width:calc(50% - 5px);flex:0 0 calc(50% - 5px)}
-  .hero-inner{gap:24px}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hs-num{font-size:1.8rem}
+  .hs-item{padding:18px 8px}
+  .hs-lbl{font-size:.76rem}
+  .hero-inner{gap:20px}
+  .rm-step{flex:0 0 calc(50% - 4px)}
 }
 </style>
 </head>
@@ -325,87 +327,6 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
           <a href="#service" class="btn btn-ghost">サービス概要を見る</a>
         </div>
       </div>
-      <!-- VISUAL -->
-      <div class="hero-visual">
-        <svg viewBox="0 0 480 390" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- bg accent circles -->
-          <circle cx="420" cy="50" r="110" fill="rgba(255,255,255,0.04)"/>
-          <circle cx="50" cy="360" r="80" fill="rgba(255,165,50,0.06)"/>
-
-          <!-- ── DASHBOARD CARD ── -->
-          <rect x="14" y="24" width="226" height="180" rx="16" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.26)" stroke-width="1.5"/>
-          <rect x="14" y="24" width="226" height="40" rx="16" fill="rgba(255,255,255,0.2)"/>
-          <rect x="14" y="50" width="226" height="14" fill="rgba(255,255,255,0.2)"/>
-          <circle cx="34" cy="44" r="5" fill="rgba(255,90,80,0.8)"/>
-          <circle cx="50" cy="44" r="5" fill="rgba(255,200,50,0.8)"/>
-          <circle cx="66" cy="44" r="5" fill="rgba(80,200,80,0.8)"/>
-          <!-- chart label -->
-          <rect x="32" y="80" width="68" height="10" rx="5" fill="rgba(255,213,128,0.55)"/>
-          <text x="220" y="82" text-anchor="end" font-size="20" fill="#ffd580" font-family="sans-serif" font-weight="900">+68%</text>
-          <!-- bars -->
-          <rect x="32" y="152" width="18" height="46" rx="4" fill="rgba(255,213,128,0.5)"/>
-          <rect x="56" y="135" width="18" height="63" rx="4" fill="rgba(255,213,128,0.65)"/>
-          <rect x="80" y="116" width="18" height="82" rx="4" fill="rgba(240,92,26,0.9)"/>
-          <rect x="104" y="127" width="18" height="71" rx="4" fill="rgba(255,213,128,0.65)"/>
-          <rect x="128" y="136" width="18" height="62" rx="4" fill="rgba(255,213,128,0.5)"/>
-          <rect x="152" y="142" width="18" height="56" rx="4" fill="rgba(255,213,128,0.4)"/>
-          <rect x="176" y="138" width="18" height="60" rx="4" fill="rgba(255,213,128,0.45)"/>
-          <line x1="26" y1="200" x2="228" y2="200" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-          <!-- trend line -->
-          <path d="M41 162 Q88 138 98 116 Q140 88 185 104" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" fill="none" stroke-dasharray="5,4"/>
-
-          <!-- ── STAT CARDS ── -->
-          <rect x="256" y="20" width="136" height="68" rx="12" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.24)" stroke-width="1"/>
-          <text x="272" y="46" font-size="11" fill="rgba(255,255,255,0.72)" font-family="sans-serif">AI活用率</text>
-          <text x="272" y="74" font-size="26" fill="#ffd580" font-family="sans-serif" font-weight="900">+68%</text>
-
-          <rect x="256" y="102" width="136" height="64" rx="12" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.24)" stroke-width="1"/>
-          <text x="272" y="126" font-size="11" fill="rgba(255,255,255,0.72)" font-family="sans-serif">月間業務削減</text>
-          <text x="272" y="154" font-size="26" fill="#ff9a5c" font-family="sans-serif" font-weight="900">49h</text>
-
-          <!-- ── FLAT CHARACTER ── -->
-          <!-- shadow -->
-          <ellipse cx="370" cy="382" rx="52" ry="9" fill="rgba(0,0,0,0.14)"/>
-          <!-- legs -->
-          <rect x="348" y="290" width="20" height="88" rx="10" fill="#0a3580"/>
-          <rect x="374" y="290" width="20" height="88" rx="10" fill="#0a3580"/>
-          <!-- shoes -->
-          <ellipse cx="358" cy="376" rx="20" ry="8" fill="#061e4a"/>
-          <ellipse cx="384" cy="376" rx="20" ry="8" fill="#061e4a"/>
-          <!-- body (suit, simple) -->
-          <rect x="334" y="178" width="76" height="120" rx="18" fill="#1762c4"/>
-          <!-- collar + tie -->
-          <path d="M358 182 L371 200 L384 182" fill="white"/>
-          <path d="M366 200 L376 200 L380 268 L371 278 L362 268 Z" fill="#f05c1a"/>
-          <!-- left arm → pointing at screen -->
-          <path d="M334 204 Q290 228 244 248" stroke="#1762c4" stroke-width="28" stroke-linecap="round" fill="none"/>
-          <!-- right arm relaxed -->
-          <path d="M410 204 Q438 224 454 242" stroke="#1762c4" stroke-width="26" stroke-linecap="round" fill="none"/>
-          <!-- pointing hand -->
-          <circle cx="242" cy="250" r="14" fill="#f0c8a0"/>
-          <!-- neck -->
-          <rect x="357" y="156" width="28" height="24" rx="8" fill="#f0c8a0"/>
-          <!-- head -->
-          <circle cx="371" cy="126" r="40" fill="#f0c8a0"/>
-          <!-- hair (simple cap shape) -->
-          <path d="M333 118 C336 90 352 78 371 78 C390 78 406 90 409 118 C400 100 386 94 371 94 C356 94 342 100 333 118Z" fill="#2a1608"/>
-          <!-- eyes (two simple ellipses) -->
-          <ellipse cx="360" cy="124" rx="6" ry="7" fill="#1a0a04"/>
-          <ellipse cx="382" cy="124" rx="6" ry="7" fill="#1a0a04"/>
-          <circle cx="362" cy="121" r="2.5" fill="rgba(255,255,255,0.85)"/>
-          <circle cx="384" cy="121" r="2.5" fill="rgba(255,255,255,0.85)"/>
-          <!-- smile -->
-          <path d="M358 142 Q371 154 384 142" stroke="#c07050" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- ears -->
-          <ellipse cx="331" cy="128" rx="9" ry="12" fill="#e8bca4"/>
-          <ellipse cx="411" cy="128" rx="9" ry="12" fill="#e8bca4"/>
-
-          <!-- decorative dots -->
-          <circle cx="228" cy="210" r="7" fill="rgba(255,213,128,0.55)"/>
-          <circle cx="210" cy="238" r="5" fill="rgba(255,255,255,0.35)"/>
-          <circle cx="232" cy="264" r="6" fill="rgba(240,92,26,0.45)"/>
-        </svg>
-      </div>
     </div>
     <!-- STATS BAR -->
     <div class="hero-stats">
@@ -441,12 +362,12 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       <div class="prob-card">
         <div class="prob-big">1,100<sub>万人</sub></div>
         <h3>2040年の労働者「供給不足」</h3>
-        <p>必要な労働力は変わらないが、年々人材確保が困難な状況となる。<strong style="color:#fff">1人あたりの生産性向上</strong>が急務です。</p>
+        <p>必要な労働力は変わらないが、年々人材確保が困難な状況となる。<strong>1人あたりの生産性向上</strong>が急務です。</p>
       </div>
       <div class="prob-card">
         <div class="prob-big">90<sub>%以上</sub></div>
         <h3>AI導入または導入意思あり</h3>
-        <p>日本企業の90%以上がAI導入・検討中。しかし最大の導入障壁は<strong style="color:#fff">「人材」の課題</strong>です。</p>
+        <p>日本企業の90%以上がAI導入・検討中。しかし最大の導入障壁は<strong>「人材」の課題</strong>です。</p>
         <div class="chips">
           <span class="chip">リテラシー不足 70.3%</span>
           <span class="chip">ノウハウ不足 44.7%</span>
@@ -467,80 +388,14 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
     </div>
     <div class="svc-grid">
       <div class="svc-card">
-        <!-- flat training illustration -->
-        <svg class="svc-illus" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="400" height="130" rx="10" fill="#f0f6ff"/>
-          <circle cx="360" cy="10" r="80" fill="rgba(23,98,196,0.07)"/>
-          <circle cx="36" cy="118" r="54" fill="rgba(240,92,26,0.05)"/>
-          <rect x="128" y="12" width="180" height="114" rx="10" fill="#1762c4"/>
-          <rect x="138" y="22" width="160" height="90" rx="6" fill="#dce9fb"/>
-          <rect x="106" y="124" width="224" height="6" rx="3" fill="#0d4a9c" opacity="0.4"/>
-          <rect x="154" y="94" width="16" height="16" rx="3" fill="#f05c1a" opacity="0.75"/>
-          <rect x="174" y="79" width="16" height="31" rx="3" fill="#1762c4" opacity="0.8"/>
-          <rect x="194" y="65" width="16" height="45" rx="3" fill="#f05c1a" opacity="0.9"/>
-          <rect x="214" y="73" width="16" height="37" rx="3" fill="#1762c4" opacity="0.75"/>
-          <rect x="234" y="80" width="16" height="30" rx="3" fill="#f05c1a" opacity="0.7"/>
-          <rect x="254" y="84" width="16" height="26" rx="3" fill="#1762c4" opacity="0.65"/>
-          <line x1="148" y1="112" x2="280" y2="112" stroke="rgba(23,98,196,0.2)" stroke-width="1.5"/>
-          <rect x="146" y="30" width="48" height="22" rx="11" fill="#f05c1a"/>
-          <text x="170" y="46" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="sans-serif">AI研修</text>
-          <rect x="200" y="34" width="64" height="8" rx="4" fill="rgba(23,98,196,0.2)"/>
-          <rect x="200" y="46" width="48" height="7" rx="3" fill="rgba(23,98,196,0.14)"/>
-          <circle cx="62" cy="40" r="26" fill="#1762c4" opacity="0.9"/>
-          <rect x="36" y="64" width="52" height="62" rx="14" fill="#1762c4" opacity="0.85"/>
-          <circle cx="52" cy="36" r="5" fill="white"/>
-          <circle cx="72" cy="36" r="5" fill="white"/>
-          <path d="M52 52 Q62 60 72 52" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M88 80 Q110 92 130 100" stroke="#1762c4" stroke-width="18" stroke-linecap="round" fill="none"/>
-          <rect x="328" y="18" width="62" height="36" rx="8" fill="#ffd580"/>
-          <text x="359" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#0d4a9c" font-family="sans-serif">11時間</text>
-          <text x="359" y="47" text-anchor="middle" font-size="9" fill="#0d4a9c" font-family="sans-serif">能力開発</text>
-          <text x="355" y="86" text-anchor="middle" font-size="14" fill="#ffd580" font-family="sans-serif" letter-spacing="1">★★★★</text>
-          <text x="358" y="104" text-anchor="middle" font-size="9" fill="#4e6280" font-family="sans-serif">満足度 4.7</text>
-        </svg>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></div>
         <div class="svc-tag">課題：AIを使いこなすAI人材がいない</div>
         <div class="svc-num">SOLUTION 01</div>
         <div class="svc-hl">11時間の<br>能力開発研修</div>
         <p>座学6時間＋実践5時間で、生成AIの基礎から実務での活用まで体系的に習得。研修翌日から即実践できるAI人材を育成します。</p>
       </div>
       <div class="svc-card">
-        <!-- flat support illustration -->
-        <svg class="svc-illus" viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="400" height="130" rx="10" fill="#fff4ee"/>
-          <circle cx="40" cy="15" r="65" fill="rgba(240,92,26,0.07)"/>
-          <circle cx="368" cy="115" r="55" fill="rgba(23,98,196,0.05)"/>
-          <circle cx="62" cy="65" r="38" fill="rgba(240,92,26,0.12)"/>
-          <path d="M38 60 Q62 40 86 60" stroke="#f05c1a" stroke-width="7" fill="none" stroke-linecap="round"/>
-          <rect x="28" y="55" width="22" height="20" rx="10" fill="#f05c1a"/>
-          <rect x="80" y="55" width="22" height="20" rx="10" fill="#f05c1a"/>
-          <path d="M42 74 Q44 86 50 88" stroke="#f05c1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <circle cx="51" cy="90" r="5" fill="#f05c1a"/>
-          <rect x="116" y="10" width="118" height="110" rx="10" fill="white" stroke="#dce9fb" stroke-width="2"/>
-          <rect x="116" y="10" width="118" height="30" rx="10" fill="#f05c1a"/>
-          <rect x="116" y="29" width="118" height="11" fill="#f05c1a"/>
-          <text x="175" y="29" text-anchor="middle" font-size="10" font-weight="700" fill="white" font-family="sans-serif">1年間サポート</text>
-          <circle cx="136" cy="62" r="9" fill="#f05c1a"/>
-          <text x="136" y="66" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">v</text>
-          <circle cx="158" cy="62" r="9" fill="#dce9fb"/>
-          <circle cx="180" cy="62" r="9" fill="#dce9fb"/>
-          <circle cx="202" cy="62" r="9" fill="#f05c1a"/>
-          <text x="202" y="66" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">v</text>
-          <circle cx="136" cy="86" r="9" fill="#dce9fb"/>
-          <circle cx="158" cy="86" r="9" fill="#f05c1a"/>
-          <text x="158" y="90" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">v</text>
-          <circle cx="180" cy="86" r="9" fill="#dce9fb"/>
-          <circle cx="202" cy="86" r="9" fill="#dce9fb"/>
-          <rect x="126" y="103" width="96" height="6" rx="3" fill="#dce9fb"/>
-          <rect x="252" y="12" width="134" height="34" rx="10" fill="white" stroke="#dce9fb" stroke-width="1.5"/>
-          <path d="M262 46 L254 56 L278 46" fill="white" stroke="#dce9fb" stroke-width="1.5" stroke-linejoin="round"/>
-          <text x="319" y="25" text-anchor="middle" font-size="9" fill="#1762c4" font-family="sans-serif">チャット相談</text>
-          <text x="319" y="38" text-anchor="middle" font-size="9" fill="#1762c4" font-family="sans-serif">いつでも受付！</text>
-          <rect x="252" y="64" width="134" height="30" rx="10" fill="#f05c1a"/>
-          <text x="319" y="76" text-anchor="middle" font-size="9" fill="white" font-family="sans-serif">月次レポート</text>
-          <text x="319" y="88" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.85)" font-family="sans-serif">毎月お届け</text>
-          <rect x="252" y="102" width="134" height="22" rx="8" fill="rgba(23,98,196,0.1)" stroke="#dce9fb" stroke-width="1.5"/>
-          <text x="319" y="117" text-anchor="middle" font-size="9" fill="#1762c4" font-weight="600" font-family="sans-serif">オンライン相談会 計4回</text>
-        </svg>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
         <div class="svc-tag">課題：研修がピークとなり組織でAIが浸透しない</div>
         <div class="svc-num">SOLUTION 02</div>
         <div class="svc-hl">1年間の<br>アフターサポート</div>
@@ -615,77 +470,18 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
     </div>
     <div class="str-grid">
       <div class="str-card">
-        <!-- illustration: trophy + 5 people + stars -->
-        <svg class="str-illus" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="40" cy="40" r="38" fill="#fff4ee"/>
-          <!-- trophy handles -->
-          <path d="M20 22 Q8 22 8 36 Q8 48 20 50" stroke="#ffd580" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <path d="M60 22 Q72 22 72 36 Q72 48 60 50" stroke="#ffd580" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <!-- cup body -->
-          <path d="M18 16 Q17 50 40 56 Q63 50 62 16 Z" fill="#ffd580"/>
-          <!-- cup rim -->
-          <rect x="16" y="13" width="48" height="8" rx="4" fill="#f0c040"/>
-          <!-- cup shine -->
-          <path d="M26 24 Q24 42 40 52" stroke="rgba(255,255,255,0.5)" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <!-- stem + base -->
-          <rect x="33" y="56" width="14" height="10" rx="3" fill="#c8a030"/>
-          <rect x="24" y="64" width="32" height="8" rx="4" fill="#c8a030"/>
-          <!-- 1st badge -->
-          <circle cx="40" cy="36" r="12" fill="rgba(255,255,255,0.5)"/>
-          <text x="40" y="41" text-anchor="middle" font-size="13" font-weight="900" fill="#0d4a9c" font-family="sans-serif">1</text>
-        </svg>
         <div class="str-num">01</div>
         <div class="str-tag">実績</div>
         <h3>研修実績 累計100社以上</h3>
         <p>人材・製造・士業など多様な業種で実績。平均満足度4.7（5段階）。多様な業種で蓄積した再現性の高いノウハウを提供します。</p>
       </div>
       <div class="str-card">
-        <!-- illustration: person with gear / wrench building custom solution -->
-        <svg class="str-illus" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="40" cy="40" r="38" fill="#f0f6ff"/>
-          <!-- main gear -->
-          <circle cx="40" cy="40" r="20" fill="none" stroke="#1762c4" stroke-width="9"/>
-          <circle cx="40" cy="40" r="8" fill="#1762c4"/>
-          <circle cx="40" cy="40" r="4" fill="#f0f6ff"/>
-          <!-- 8 teeth of main gear -->
-          <rect x="36.5" y="6" width="7" height="13" rx="3.5" fill="#1762c4"/>
-          <rect x="36.5" y="61" width="7" height="13" rx="3.5" fill="#1762c4"/>
-          <rect x="6" y="36.5" width="13" height="7" rx="3.5" fill="#1762c4"/>
-          <rect x="61" y="36.5" width="13" height="7" rx="3.5" fill="#1762c4"/>
-          <rect x="36.5" y="6" width="7" height="13" rx="3.5" fill="#1762c4" transform="rotate(45 40 40)"/>
-          <rect x="36.5" y="6" width="7" height="13" rx="3.5" fill="#1762c4" transform="rotate(-45 40 40)"/>
-          <rect x="36.5" y="61" width="7" height="13" rx="3.5" fill="#1762c4" transform="rotate(45 40 40)"/>
-          <!-- small orange gear (top-right) -->
-          <circle cx="64" cy="18" r="11" fill="none" stroke="#f05c1a" stroke-width="5"/>
-          <circle cx="64" cy="18" r="4" fill="#f05c1a"/>
-          <rect x="61" y="5" width="6" height="9" rx="3" fill="#f05c1a"/>
-          <rect x="61" y="22" width="6" height="9" rx="3" fill="#f05c1a"/>
-          <rect x="51" y="15" width="9" height="6" rx="3" fill="#f05c1a"/>
-          <rect x="68" y="15" width="9" height="6" rx="3" fill="#f05c1a"/>
-        </svg>
         <div class="str-num">02</div>
         <div class="str-tag">カスタマイズ</div>
         <h3>業界・業種に合わせた実務直結設計</h3>
         <p>各企業の課題・ニーズに合わせて最適な研修を設計。現場から活用アイデアを抽出し、実際の業務に適用することで実務適用率を最大化します。</p>
       </div>
       <div class="str-card">
-        <!-- illustration: two people shaking hands / meeting face-to-face -->
-        <svg class="str-illus" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="40" cy="40" r="38" fill="#f0f6ff"/>
-          <!-- person A (left, blue) -->
-          <circle cx="20" cy="24" r="11" fill="#1762c4"/>
-          <rect x="6" y="36" width="28" height="34" rx="10" fill="#1762c4"/>
-          <!-- person B (right, orange) -->
-          <circle cx="60" cy="24" r="11" fill="#f05c1a"/>
-          <rect x="46" y="36" width="28" height="34" rx="10" fill="#f05c1a"/>
-          <!-- A hand reaching right -->
-          <path d="M34 50 Q40 52 44 56" stroke="#1762c4" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <!-- B hand reaching left -->
-          <path d="M46 50 Q40 52 36 56" stroke="#f05c1a" stroke-width="7" stroke-linecap="round" fill="none"/>
-          <!-- center connection dot -->
-          <circle cx="40" cy="56" r="8" fill="white" stroke="#ffd580" stroke-width="3"/>
-          <path d="M36 56 L38.5 59.5 L44 52" stroke="#ffd580" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
         <div class="str-num">03</div>
         <div class="str-tag">対面</div>
         <h3>講師が企業に訪問<br>集中対面2回</h3>
@@ -727,71 +523,6 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
           </div>
         </div>
       </div>
-      <!-- support illustration -->
-      <svg viewBox="0 0 220 260" width="220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;filter:drop-shadow(0 12px 28px rgba(0,0,0,0.22))">
-        <!-- backdrop card -->
-        <rect x="10" y="10" width="200" height="240" rx="16" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-        <!-- screen area -->
-        <rect x="30" y="28" width="160" height="100" rx="8" fill="rgba(255,255,255,0.12)"/>
-        <!-- browser dots -->
-        <circle cx="44" cy="40" r="4" fill="rgba(255,100,90,0.8)"/>
-        <circle cx="56" cy="40" r="4" fill="rgba(255,200,60,0.8)"/>
-        <circle cx="68" cy="40" r="4" fill="rgba(80,200,80,0.8)"/>
-        <!-- chat messages on screen -->
-        <rect x="40" y="56" width="90" height="16" rx="8" fill="rgba(255,255,255,0.85)"/>
-        <text x="85" y="68" text-anchor="middle" font-size="8" fill="#1762c4" font-family="sans-serif">AIの活用方法を教えてください</text>
-        <rect x="90" y="78" width="90" height="16" rx="8" fill="#f05c1a" opacity="0.9"/>
-        <text x="135" y="90" text-anchor="middle" font-size="8" fill="white" font-family="sans-serif">もちろんです！一緒に考えましょう</text>
-        <rect x="40" y="100" width="70" height="16" rx="8" fill="rgba(255,255,255,0.75)"/>
-        <text x="75" y="112" text-anchor="middle" font-size="8" fill="#1762c4" font-family="sans-serif">月次レポートも届きました！</text>
-        <!-- person at desk (small) -->
-        <ellipse cx="110" cy="254" rx="32" ry="6" fill="rgba(0,0,0,0.2)"/>
-        <!-- legs -->
-        <rect x="94" y="208" width="14" height="46" rx="7" fill="#0d4a9c"/>
-        <rect x="112" y="208" width="14" height="46" rx="7" fill="#0d4a9c"/>
-        <ellipse cx="101" cy="252" rx="16" ry="7" fill="#0a236a"/>
-        <ellipse cx="119" cy="252" rx="16" ry="7" fill="#0a236a"/>
-        <!-- body -->
-        <rect x="82" y="148" width="56" height="66" rx="14" fill="#f05c1a"/>
-        <!-- arms -->
-        <path d="M82 168 Q58 180 42 190" stroke="#f05c1a" stroke-width="20" stroke-linecap="round" fill="none"/>
-        <path d="M138 168 Q162 180 178 190" stroke="#f05c1a" stroke-width="18" stroke-linecap="round" fill="none"/>
-        <!-- tablet left hand -->
-        <rect x="26" y="184" width="34" height="24" rx="5" fill="rgba(255,255,255,0.9)"/>
-        <rect x="30" y="188" width="26" height="16" rx="3" fill="#dce9fb"/>
-        <rect x="32" y="193" width="22" height="2" rx="1" fill="rgba(23,98,196,0.5)"/>
-        <rect x="32" y="198" width="16" height="2" rx="1" fill="rgba(23,98,196,0.35)"/>
-        <!-- phone right hand -->
-        <rect x="174" y="184" width="18" height="32" rx="5" fill="rgba(255,255,255,0.9)"/>
-        <circle cx="183" cy="212" r="4" fill="#dce9fb"/>
-        <!-- neck -->
-        <rect x="100" y="132" width="22" height="18" rx="6" fill="#f0ccb4"/>
-        <!-- head -->
-        <circle cx="111" cy="120" r="24" fill="#f0ccb4"/>
-        <!-- hair -->
-        <path d="M89 114 C91 98 100 92 111 92 C122 92 131 98 133 114 C127 104 119 100 111 100 C103 100 95 104 89 114Z" fill="#7a3510"/>
-        <!-- headset -->
-        <path d="M88 116 Q111 102 134 116" stroke="#1762c4" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <circle cx="88" cy="120" r="7" fill="#f05c1a"/>
-        <circle cx="134" cy="120" r="7" fill="#f05c1a"/>
-        <!-- eyes -->
-        <ellipse cx="104" cy="120" rx="4" ry="4.5" fill="#2a1a0a"/>
-        <ellipse cx="118" cy="120" rx="4" ry="4.5" fill="#2a1a0a"/>
-        <circle cx="105.5" cy="118" r="1.5" fill="rgba(255,255,255,0.85)"/>
-        <circle cx="119.5" cy="118" r="1.5" fill="rgba(255,255,255,0.85)"/>
-        <!-- smile -->
-        <path d="M104 132 Q111 140 118 132" stroke="#c07050" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-        <ellipse cx="88" cy="122" rx="7" ry="8" fill="#e8b89a"/>
-        <ellipse cx="134" cy="122" rx="7" ry="8" fill="#e8b89a"/>
-        <!-- floating chart icon -->
-        <circle cx="172" cy="56" r="14" fill="#ffd580"/>
-        <rect x="163" y="58" width="5" height="7" rx="1.5" fill="#f05c1a"/>
-        <rect x="170" y="53" width="5" height="12" rx="1.5" fill="#0d4a9c"/>
-        <rect x="177" y="55" width="5" height="10" rx="1.5" fill="#f05c1a"/>
-        <!-- checkmark circle -->
-        <circle cx="48" cy="144" r="12" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-        <path d="M43 144 L46 148 L53 140" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
     </div>
   </div>
 </section>
@@ -905,7 +636,7 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
     <div class="sh">
       <span class="sh-eye">お問い合わせ</span>
       <h2>資料請求・お問い合わせ</h2>
-      <p class="lead" style="color:rgba(255,255,255,.7);margin:12px auto 0">ご不明な点やご質問はお気軽にお問い合わせください。担当者よりご連絡いたします。</p>
+      <p class="lead" style="color:rgba(255,255,255,.6);margin:12px auto 0">ご不明な点やご質問はお気軽にお問い合わせください。担当者よりご連絡いたします。</p>
     </div>
     <div class="cf">
       <div class="cf-grid">
