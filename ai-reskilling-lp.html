@@ -6,8 +6,8 @@
 <title>AIリスキリング研修 | AIまるごと伴走プログラム | 株式会社ビジョン × 株式会社KANNON</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;color:#172340;background:#fff;line-height:1.7}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;color:#172340;background:#fff;line-height:1.7;overflow-x:hidden;min-width:0}
 :root{
   --blue:#1762c4;--blue-dark:#0d4a9c;--blue-mid:#2272d8;
   --blue-lt:#dce9fb;--blue-pale:#f0f6ff;--blue-xs:#f7faff;
@@ -239,10 +239,13 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
 .ft-copy{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;color:rgba(255,255,255,.3);font-size:.74rem;text-align:center}
 
 /* ILLUSTRATIONS */
-.svc-illus{width:100%;height:130px;display:block;margin-bottom:22px;overflow:visible;border-radius:10px}
-.str-illus{width:80px;height:80px;display:block;margin:0 auto 18px;overflow:visible}
+.svc-illus{width:100%;height:130px;display:block;margin-bottom:22px;overflow:hidden;border-radius:10px}
+.str-illus{width:80px;height:80px;display:block;margin:0 auto 18px;overflow:hidden}
 .prob-illus{width:100%;max-width:280px;margin:18px auto 0;display:block}
 .sup-illus{max-width:260px;margin:32px auto 0;display:block}
+
+/* SUPPORT GRID — named class for responsive control */
+.sup-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;max-width:860px;margin:0 auto}
 
 /* RESPONSIVE */
 @media(max-width:900px){.str-grid{grid-template-columns:1fr 1fr}}
@@ -253,13 +256,27 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
   nav{display:none}
   .cf{padding:30px 20px}
   .str-grid{grid-template-columns:1fr}
-  .rm-step:not(:last-child)::after{right:-8px}
+  .rm-step:not(:last-child)::after{display:none}
   .hero-inner{grid-template-columns:1fr}
   .hero-visual{display:none}
-  #support [style*="grid-template-columns"]{display:block}
-  #support svg[viewBox="0 0 220 260"]{display:none}
+  .sup-grid{display:block}
+  .sup-grid>svg{display:none}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hs-item:nth-child(2){border-right:none}
+  .hs-item:nth-child(3){border-right:1px solid rgba(255,255,255,.12)}
+  .hs-item:nth-child(1),.hs-item:nth-child(2){border-bottom:1px solid rgba(255,255,255,.12)}
+  .rm-steps{flex-wrap:wrap;overflow-x:hidden;gap:10px}
+  .rm-step{min-width:calc(50% - 10px);flex:0 0 calc(50% - 10px)}
 }
-@media(max-width:480px){#hero{padding:60px 0 52px}.hero-stats{gap:20px}}
+@media(max-width:480px){
+  #hero{padding:52px 0 0}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hs-num{font-size:1.9rem}
+  .hs-item{padding:20px 10px}
+  .container{padding:0 14px}
+  .rm-step{min-width:calc(50% - 5px);flex:0 0 calc(50% - 5px)}
+  .hero-inner{gap:24px}
+}
 </style>
 </head>
 <body>
@@ -686,7 +703,7 @@ footer{background:var(--blue-dark);padding:44px 0 24px}
       <h2>研修で終わりにしない<br>1年間のアフターサポート</h2>
       <p class="lead" style="color:rgba(255,255,255,.7);margin:12px auto 0">研修終了日から1年間、常にAI最前線を走り続けられる環境を提供します。</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;max-width:860px;margin:0 auto">
+    <div class="sup-grid">
       <div class="sup-items">
         <div class="sup-item">
           <div class="sup-num">01</div>
